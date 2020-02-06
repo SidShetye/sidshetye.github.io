@@ -1,0 +1,19 @@
+.fl-builder-row-settings .fl-field-responsive-setting input[name="bg_position_custom_right"], .fl-builder-row-settings .fl-field-responsive-setting input[name="bg_position_custom_left"] {display: none !important;}
+.fl-node-57c87a35bd3a4 .fl-bg-video-audio {display: none;cursor: pointer;position: absolute;bottom: 20px;right: 20px;z-index: 5;width: 20px;}
+.fl-node-57c87a35bd3a4 .fl-bg-video-audio .fl-audio-control {font-size: 20px;}
+.fl-node-57c87a35bd3a4 .fl-bg-video-audio .fa-times {font-size: 10px;vertical-align: middle;position: absolute;top: 5px;left: 11px;bottom: 0;}
+.fl-node-57c87a35bd3a4 > .fl-row-content-wrap {border-top-width: 1px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+.fl-node-57c87be56ccdc {width: 100%;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+.fl-node-57c87a50c5353 {width: 50%;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+.fl-node-57c87a50c539b {width: 50%;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+.fl-node-57c87a35c117c > .fl-module-content {margin-right: 40px;}
+@media (max-width: 768px) {.fl-node-57c87a35c117c > .fl-module-content {margin-right: 20px;}}
+.fl-node-57c87c5c802ac > .fl-module-content {margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;}

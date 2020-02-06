@@ -1,0 +1,24 @@
+.fl-builder-row-settings .fl-field-responsive-setting input[name="bg_position_custom_right"], .fl-builder-row-settings .fl-field-responsive-setting input[name="bg_position_custom_left"] {display: none !important;}
+.fl-node-589e5e3c5f595 .fl-bg-video-audio {display: none;cursor: pointer;position: absolute;bottom: 20px;right: 20px;z-index: 5;width: 20px;}
+.fl-node-589e5e3c5f595 .fl-bg-video-audio .fl-audio-control {font-size: 20px;}
+.fl-node-589e5e3c5f595 .fl-bg-video-audio .fa-times {font-size: 10px;vertical-align: middle;position: absolute;top: 5px;left: 11px;bottom: 0;}
+.fl-node-589e5e3c5f595 > .fl-row-content-wrap:after {background-color: rgba(0,0,0,.3);}
+.fl-node-589e5e3c5f595 > .fl-row-content-wrap {background-repeat: no-repeat;background-position: center center;background-attachment: fixed;background-size: cover;border-top-width: 1px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px;}
+.fl-builder-mobile .fl-node-589e5e3c5f595 > .fl-row-content-wrap {background-image: url("https://www2.crypteron.com/wp-content/uploads/Super-Crypteron-CityScape.jpg");background-position: center center;background-attachment: scroll;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+.fl-node-589e5e3c5f63e {width: 15%;}
+.fl-node-589e5e3c5f63e > .fl-col-content {border-top-width: 1px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+.fl-node-589e5e3c5f675 {width: 65%;}
+.fl-node-589e5e3c5f675 > .fl-col-content {border-top-width: 1px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+.fl-node-589e5e3c5f675 > .fl-col-content {margin-top: 100px;margin-bottom: 60px;}
+.fl-node-589e5e3c5f6ab {width: 20%;}
+.fl-node-589e5e3c5f6ab > .fl-col-content {border-top-width: 1px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+.header-buttons {margin-top: 10px;}
+.header-buttons .btn {margin: 20px 20px;}

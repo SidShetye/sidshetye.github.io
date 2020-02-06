@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="icon" href="https://www2.crypteron.com/wp-content/themes/crypteron/includes/img/favicon.png" type="image/x-icon"><title>CipherDB Developer's Guide - .NET : Crypteron</title><meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="CipherDB Developer's Guide - .NET : Crypteron"><meta property="og:description" content="The Crypteron CipherDB middleware is a patented application layer data security framework that allows your .NET or Java application to quickly be upgraded for strong data encryption even if the underlying database technologies or infrastructure providers are insecure. In fact CipherDB reduces the trust footprint to just your application. This means the database server, database …"><meta property="og:url" content="https://www2.crypteron.com/developers-guide/cipherdb/dotnet/"><meta property="og:site_name" content="Crypteron"><meta property="article:publisher" content="https://www.facebook.com/CrypteronInc"><meta property="og:image" content="https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-0011.png"><meta property="og:image:secure_url" content="https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-0011.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="The Crypteron CipherDB middleware is a patented application layer data security framework that allows your .NET or Java application to quickly be upgraded for strong data encryption even if the underlying database technologies or infrastructure providers are insecure. In fact CipherDB reduces the trust footprint to just your application. This means the database server, database […]"><meta name="twitter:title" content="CipherDB Developer's Guide - .NET : Crypteron"><meta name="twitter:site" content="@crypteron"><meta name="twitter:image" content="https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-0011.png"><meta name="twitter:creator" content="@crypteron"><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www2.crypteron.com/#organization","name":"Crypteron","url":"https://www2.crypteron.com/","sameAs":["https://www.facebook.com/CrypteronInc","https://www.linkedin.com/company/crypteron","https://www.youtube.com/channel/UColg4W9_4wPVYHHexDK-N9w","https://twitter.com/crypteron"],"logo":{"@type":"ImageObject","@id":"https://www2.crypteron.com/#logo","url":"https://www2.crypteron.com/wp-content/uploads/2014/12/crypteron-logo-with-bg.jpg","width":512,"height":512,"caption":"Crypteron"},"image":{"@id":"https://www2.crypteron.com/#logo"}},{"@type":"WebSite","@id":"https://www2.crypteron.com/#website","url":"https://www2.crypteron.com/","name":"Crypteron","description":"Instant Data Security","publisher":{"@id":"https://www2.crypteron.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www2.crypteron.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www2.crypteron.com/developers-guide/cipherdb/dotnet/#primaryimage","url":"https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-0011.png","width":653,"height":613},{"@type":"WebPage","@id":"https://www2.crypteron.com/developers-guide/cipherdb/dotnet/#webpage","url":"https://www2.crypteron.com/developers-guide/cipherdb/dotnet/","inLanguage":"en-US","name":"CipherDB Developer's Guide - .NET : Crypteron","isPartOf":{"@id":"https://www2.crypteron.com/#website"},"primaryImageOfPage":{"@id":"https://www2.crypteron.com/developers-guide/cipherdb/dotnet/#primaryimage"},"datePublished":"2015-03-22T02:33:17+00:00","dateModified":"2020-01-15T22:10:51+00:00"}]}</script><link rel="dns-prefetch" href="//www.google.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="https://www2.crypteron.com/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="gdpr-css" href="https://www2.crypteron.com/wp-content/plugins/gdpr/assets/css/gdpr-public.css" type="text/css" media="all"><link rel="stylesheet" id="ez-icomoon-css" href="https://www2.crypteron.com/wp-content/plugins/easy-table-of-contents/vendor/icomoon/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="ez-toc-css" href="https://www2.crypteron.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css" type="text/css" media="all"><style id="ez-toc-inline-css" type="text/css">
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}
+</style><link rel="stylesheet" id="crypteron-bootstrap-css" href="https://www2.crypteron.com/wp-content/themes/crypteron/includes/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="all"><link rel="stylesheet" id="crypteron-animate-css-css" href="https://www2.crypteron.com/wp-content/themes/crypteron/includes/bower_components/animate.css/animate.min.css" type="text/css" media="all"><link rel="stylesheet" id="crypteron-font-awesome-css" href="https://www2.crypteron.com/wp-content/themes/crypteron/includes/css/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="crypteron-style-css" href="https://www2.crypteron.com/wp-content/themes/crypteron/style.css" type="text/css" media="all"><link rel="stylesheet" id="crypteron-prism-css-css" href="https://www2.crypteron.com/wp-content/themes/crypteron/includes/css/prism.css" type="text/css" media="all"><link rel="stylesheet" id="crypteron-magnfic-css-css" href="https://www2.crypteron.com/wp-content/themes/crypteron/includes/css/magnific-popup.css" type="text/css" media="all"><link rel="stylesheet" id="crypteron-tweaks-css" href="https://www2.crypteron.com/wp-content/themes/crypteron/includes/css/tweaks.css" type="text/css" media="all"><script type="text/javascript" src="https://www.google.com/recaptcha/api.js?ver=2.2.11"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var GDPR = {"ajaxurl":"https:\/\/www2.crypteron.com\/wp-admin\/admin-ajax.php","logouturl":"","i18n":{"aborting":"Aborting","logging_out":"You are being logged out.","continue":"Continue","cancel":"Cancel","ok":"OK","close_account":"Close your account?","close_account_warning":"Your account will be closed and all data will be permanently deleted and cannot be recovered. Are you sure?","are_you_sure":"Are you sure?","policy_disagree":"By disagreeing you will no longer have access to our site and will be logged out."},"is_user_logged_in":"","refresh":"1"};
+/* ]]> */
+</script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/gdpr/assets/js/gdpr-public.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/html5-responsive-faq/js/hrf-script.js"></script><script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('6crcdxsc9z5k');
+</script><script type="text/javascript">
+    if(is_allowed_cookie( '_ga' )){
+        // Global site tag (gtag.js) - Google Analytics
+        var gtagScriptLoader = document.createElement("script");
+        gtagScriptLoader.type = "text/javascript";
+        gtagScriptLoader.setAttribute("async", "true");
+        gtagScriptLoader.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=UA-38495563-2");
+        // we hang this off the global object so we can reference this everywhere else
+        // gtags has a crap api that expects this unique value sprinkled everywhere
+        gtagScriptLoader.GA_TRACKING_ID = "UA-38495563-2";
+        document.documentElement.firstChild.appendChild(gtagScriptLoader);
+        
+        window.dataLayer = window.dataLayer || [];
+        gtag = function(){dataLayer.push(arguments);} // defined like this for safari compatiblity 
+        gtag('js', new Date());
+
+        gtag('config', 'UA-38495563-2', {
+            'page_path': location.pathname + location.search + location.hash
+        });        
+    }
+</script><script>
+    if(is_allowed_cookie( 'fr' )){
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '272001609806965');
+        fbq('track', "PageView");
+    }
+</script><script type="text/javascript">
+if(is_allowed_cookie( 'mp_' )){
+    (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+            0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+            for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+        mixpanel.init("eabe64b08e1a662c6d5dfb2e7b082837", {
+            loaded: function(mixpanel){
+                var distinct_id = mixpanel.get_distinct_id();
+                jQuery('input.mixpanel-distinct-id').val(distinct_id);
+                jQuery(window).trigger('mixpanelLoaded');
+            }
+        });
+}</script><script type="text/javascript">
+if(is_allowed_cookie( 'mp_' )){
+    jQuery( document ).ready(function( $ ) {
+        mixpanel.register({
+            'Page Name' : 'CipherDB Developerâ&#128;&#153;s Guide â&#128;&#147; .NET'
+        });
+
+                    mixpanel.track('Page Viewed');
+        
+            });
+}
+</script></head><body class="page-template-default page page-id-520 page-child parent-pageid-1009 group-blog">
+<div class="page-site-wrapper">
+	
+    
+	<nav class="navbar navbar-inverse navbar-cry navbar-fixed-top" role="navigation"><div class="container">
+			<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+								<a class="navbar-brand" href="https://www2.crypteron.com/" title="Crypteron" rel="home">
+					<img class="logo-icon" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/img/LogoMenuIcon.png">Crypteron
+				</a>
+				<div class="mobile-try-free-container">
+					<a class="btn btn-primary" href="#register">Try Free</a>
+				</div>
+			</div>
+
+			<div id="top-nav" class="navbar-collapse collapse navbar-inner">
+				<div class="mobile-login-button-container visible-hamburger-block">
+					<a class="btn btn-black btn-block btn-noarrow" href="https://my.crypteron.com">Log In</a>
+				</div>
+				<ul id="menu-main-menu" class="nav navbar-nav top-menu"><li id="menu-item-2433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2433"><a href="https://www2.crypteron.com/features/">Features</a></li>
+<li id="menu-item-2239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2239"><a href="https://www2.crypteron.com/pricing/">Pricing</a></li>
+<li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-54 dropdown"><a href="#" data-toggle="dropdown" data-target="#" class="dropdown-toggle">Documentation <span class="caret"></span></a>
+<ul class="dropdown-menu"><li id="menu-item-1834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1834"><a href="https://www2.crypteron.com/docs/">Developer Guide</a></li>
+	<li id="menu-item-1573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1573"><a href="https://www2.crypteron.com/faq/">Frequently Asked Questions</a></li>
+	<li id="menu-item-1168" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1168"><a href="https://support.crypteron.com">Support</a></li>
+</ul></li>
+<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-53 dropdown"><a href="#" data-toggle="dropdown" data-target="#" class="dropdown-toggle">Compliance <span class="caret"></span></a>
+<ul class="dropdown-menu"><li id="menu-item-1532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1532"><a href="https://www2.crypteron.com/compliance-faq/">Compliance FAQ</a></li>
+	<li id="menu-item-2281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2281"><a href="https://www2.crypteron.com/hipaa-and-hitech/">Healthcare (HIPAA and HITECH)</a></li>
+	<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="https://www2.crypteron.com/pci/">eCommerce (PCI)</a></li>
+	<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://www2.crypteron.com/security-checklist/">Security Checklist</a></li>
+</ul></li>
+<li id="menu-item-40" class="blog-menu hidden-sm menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="https://www2.crypteron.com/blog/">Blog</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="https://www2.crypteron.com/contact/">Contact</a></li>
+</ul></div>
+
+			<div class="buttons-container navbar-right hidden-hamburger">
+				<a class="btn btn-black hollow navbar-btn btn-noarrow" href="https://my.crypteron.com">Log In</a><a class="btn btn-primary navbar-btn btn-noarrow" href="#register">Try <span class="visible-md-inline visible-lg-inline">For</span> Free</a>
+			</div>
+
+		</div>
+	</nav><div class="page-site-content">
+
+<div class="container blog-content">
+	<div class="row">
+		<div class="col-md-9">
+			
+				
+<article id="post-520" class="post-520 page type-page status-publish hentry"><header><h1 class="page-title">CipherDB Developer’s Guide – .NET</h1>
+	</header><div class="entry-content">
+		<div class="ttr_start"></div>
+<p>The Crypteron CipherDB middleware is a patented application layer data security framework that allows your .NET or Java application to quickly be upgraded for strong data encryption even if the underlying database technologies or infrastructure providers are insecure. In fact CipherDB reduces the trust footprint to just your application. This means the database server, database administrators and pretty much anything outside your application instance and its OS does NOT need to be trusted for information assurance.</p>
+
+
+
+<div id="ez-toc-container" class="counter-hierarchy counter-decimal ez-toc-grey">
+<div class="ez-toc-title-container">
+<p class="ez-toc-title">Table of Contents</p>
+<span class="ez-toc-title-toggle"><a class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"><i class="ez-toc-glyphicon ez-toc-icon-toggle"></i></a></span></div>
+<nav><ul class="ez-toc-list ez-toc-list-level-1"><li class="ez-toc-page-1 ez-toc-heading-level-1"><a class="ez-toc-link ez-toc-heading-1" href="#Overview" title="Overview">Overview</a><ul class="ez-toc-list-level-2"><li class="ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-2" href="#Classification_of_data" title="Classification of data">Classification of data</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-3" href="#Flag_columns_as_Secure" title="Flag columns as ‘Secure’">Flag columns as ‘Secure’</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-4" href="#Entity_Framework_Code_First" title="Entity Framework – Code First">Entity Framework – Code First</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-5" href="#Entity_Framework_Database_First" title="Entity Framework – Database First">Entity Framework – Database First</a><ul class="ez-toc-list-level-4"><li class="ez-toc-heading-level-4"><a class="ez-toc-link ez-toc-heading-6" href="#Directly_renaming_SQL_schema" title="Directly renaming SQL schema">Directly renaming SQL schema</a></li><li class="ez-toc-page-1 ez-toc-heading-level-4"><a class="ez-toc-link ez-toc-heading-7" href="#Name_mapping_when_SQL_schema_cant_be_changed" title="Name mapping when SQL schema can’t be changed">Name mapping when SQL schema can’t be changed</a></li></ul></li></ul></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-8" href="#Setup_your_App_on_the_Dashboard" title="Setup your App on the Dashboard">Setup your App on the Dashboard</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-9" href="#Integrating_CipherDB_middleware" title="Integrating CipherDB middleware">Integrating CipherDB middleware</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-10" href="#Entity_Framework_Database_First-2" title="Entity Framework – Database First">Entity Framework – Database First</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-11" href="#Entity_Framework_Code_First-2" title="Entity Framework – Code First">Entity Framework – Code First</a></li></ul></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-12" href="#Stored_Procedures_and_CipherDB" title="Stored Procedures and CipherDB">Stored Procedures and CipherDB</a></li></ul></li><li class="ez-toc-page-1 ez-toc-heading-level-1"><a class="ez-toc-link ez-toc-heading-13" href="#Configuration_settings" title="Configuration settings">Configuration settings</a><ul class="ez-toc-list-level-2"><li class="ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-14" href="#NET_Core" title=".NET Core">.NET Core</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-15" href="#NET_Framework" title=".NET Framework">.NET Framework</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-16" href="#i" title="<crypteronConfig>"><crypteronConfig></a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-17" href="#i-2" title="<myCrypteronAccount>"><myCrypteronAccount></a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-18" href="#i-3" title="<commonConfig>"><commonConfig></a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-19" href="#i-4" title="<cipherDbConfig>"><cipherDbConfig></a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-20" href="#i-5" title="<cipherStorConfig>"><cipherStorConfig></a></li></ul></li></ul></li></ul></nav></div>
+
+
+
+
+<p>CipherDB works with SQL Server, Azure SQL, MySQL, Amazon RDS, Oracle or pretty much any SQL other database (sharded or not) and integration is just a couple of lines of code for the entire application. We have client libraries that extend existing ORM APIs like Entity Framework or NHibernate (C# clients) or Hibernate (Java clients) to auto-magically work with the built-in key management servers which can handle billions of keys. Best of all, we preserved the familiar programming model so you and your team are productive within minutes. In fact, here is the before and after programming model:</p>
+
+
+
+<pre class="code language-csharp"><code>// Before: Unprotected regular access
+using (var db = new DbContext())
+{
+    // do work
+}
+</code></pre>
+
+<pre class="code language-csharp"><code>// After: Crypteron protected access
+using (var secDb = new CipherDBContext())
+{
+    // do work. Network and database see only strongly encrypted data
+    // while only your app sees unencrypted data for ease of development
+}</code></pre>
+
+
+
+<p>All database access points are automatically upgraded for security in a transparent manner, so no need to check every database call separately. Behind the scenes, the encryption framework takes care of encryption, decryption, key caching, key lifecycle management, tamper detection, SQL row binds, encryption key migrations and rollovers, policy enforcement, decoupling of administrative, security and development roles as well as many other features. The overhead of the entire security pipeline is imperceptible to your end users – under 1ms for your typical record so external factors like network, bandwidth usually dominate any impact of CipherDB. For a detailed article on performance, please read our <a title="CipherDB Performance Benchmarks" href="https://crypteron.com/blog/cipherdb-performance-benchmarks/" target="_blank" rel="noopener noreferrer">blog post here</a>.</p>
+
+
+
+<p>CipherDB also enables creating isolated security partitions for multi-tenant situations as well as ACLs based policies controlling data access. This is reduced to a simple programming model like</p>
+
+
+
+<pre class="code language-csharp"><code>// Crypteron protected access</code><br><code>using (var secDb = new CipherDBContext("MyTenant45", "ReadOnlyRole")) </code><br><code>{     </code><br><code>    // access to other tenant's security paritions denied     </code><br><code>    // write access within this partition denied </code><br><code>}</code></pre>
+
+
+
+<p>CipherDB helps you focus on the core of your application without being overwhelmed by the security implications of handling sensitive data in a connected environment.</p>
+
+
+
+<p>Also take a look at Crypteron’s CipherStor product if your application also needs to protect unstructured data like flat-files (eg: 911 audio recording, crime scene imagery etc) that will be resident on file servers (eg: Amazon S3, Azure Blob Storage or 3rd party filers) rather than database servers. CipherDB and CipherStor use the same underlying key-management system, simplifying the application domain model.</p>
+
+
+
+<p>Crypteron’s CipherDB and CipherStor security framework is also available in a FIPS-140-2 certified flavor and is fully compliant with NSA Suite B. It can even be used to protect data classified as military “Top Secret”.</p>
+
+
+
+<h1>Overview<span class="ez-toc-section" id="Overview"></span></h1>
+
+
+
+<p>The overall process is</p>
+
+
+
+<ol><li>Classification of data: Plan which fields to encrypt</li><li>Column naming: Prefixing the secure columns with Secure_ either directly in SQL (new designs) or via Entity Framework remapping (existing, legacy SQL designs)</li><li>Setup your App on the Crypteron Management Dashboard and passing the API AppSecret back to your app via the web.config or app.config</li><li>Integrating CipherDB middleware to your .NET app.</li></ol><p>We also provide some simple <a rel="noreferrer noopener" href="https://github.com/crypteron/crypteron-sample-apps" target="_blank">sample applications on GitHub</a>.</p>
+
+
+
+<h2>Classification of data<span class="ez-toc-section" id="Classification_of_data"></span></h2>
+
+
+
+<p> This stage is code free in the sense that it’s purely a planning stage. You need to decide which fields in which tables are sensitive for your business. For example, while social security number would be considered a sensitive field in almost every application, perhaps your use case might consider ‘address’ as a secure field too. All such secure columns are marked as such so Crypteron can protect them during their natural data flows. Some illustrative examples are:<br> 1. User profile Table, <code>SocialSecurity</code> column<br> 2. Patient profile Table, <code>First Name</code> column<br> 3. Payments Table, <code>CreditCardNumber</code> column<br> and so on<br> Remember, if you aren’t sure about a particular field, it’s probably a good idea to flag it as secure it because attackers can be quite creative how they use leaked data. </p>
+
+
+
+<p><strong>NOTE:</strong></p>
+
+
+
+<ol><li>Plan for the fact that SQL columns to be secured must be of string or binary type</li><li>Keep column lengths to max (e.g. <code>nvarchar(max)</code> for string or <code>varbinary(max)</code> for binary). This is because strong encryption expands the resulting cipher-text size and keeping it ‘max’ gives you full flexibility without any disadvantages. Note that modern databases do <strong>not</strong> pre-allocate space – so this technique doesn’t wastes space. </li></ol><h2>Flag columns as ‘Secure’<span class="ez-toc-section" id="Flag_columns_as_Secure"></span></h2>
+
+
+
+<p>Depending on whether this is Entity Framework code-first or Entity Framework database-first, there are two paths.</p>
+
+
+
+<h3>Entity Framework – Code First<span class="ez-toc-section" id="Entity_Framework_Code_First"></span></h3>
+
+
+
+<p>Simple add the <code>[Secure]</code> attribute to the entity’s property and you’re done</p>
+
+
+
+<pre class="wp-block-code"><code>public class User
+{
+    ...
+    [Secure]
+    public string CreditCardNumber { get; set; }
+    ...
+}</code></pre>
+
+
+
+<h3>Entity Framework – Database First<span class="ez-toc-section" id="Entity_Framework_Database_First"></span></h3>
+
+
+
+<p>Database first regenerates the entity class files, so you can’t add the <code>[Secure]</code> attribute to your class (they’ll get overwritten during auto-generation). You can instead prefix the property name with <code>Secure_</code>. Example: <code>CreditCardNumber</code> becomes <code>Secure_CreditCardNumber</code>.</p>
+
+
+
+<h4>Directly renaming SQL schema<span class="ez-toc-section" id="Directly_renaming_SQL_schema"></span></h4>
+
+
+
+<p>This can be used in new databases. So if your SQL column is named (for example) <code>Secure_CreditCardNumber</code>, the Entity Framework property will also be <code>Secure_CreditCardNumber</code>. This is a simple and straight forward approach.</p>
+
+
+
+<h4>Name mapping when SQL schema can’t be changed<span class="ez-toc-section" id="Name_mapping_when_SQL_schema_cant_be_changed"></span></h4>
+
+
+
+<p>To keep the SQL schema unchanged but only add the <code>Secure_</code> prefix to entity framework properties, you have to edit the SQL schema to Entity Framework mappings. Simply double click the the Entity Framework EDMX file in your Visual Studio solution to open it. Then update the name mapping as shown in the example below:</p>
+
+
+
+<figure class="wp-block-image"><a href="https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-0011.png"><img src="https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-0011.png" alt="Entity Framework Database-first remapping"></a></figure><p>TIP: If you’re renaming existing members and are using a recent version of Visual Studio, it’s best to use Visual Studio’s refactor menu (right click member => refactor => rename) to rename members with the ‘Secure_’ prefix.</p>
+
+
+
+<h2>Setup your App on the Dashboard<span class="ez-toc-section" id="Setup_your_App_on_the_Dashboard"></span></h2>
+
+
+
+<p>Your CipherDB powered App orchestrates the necessary work with the back-end Key management systems at Crypteron. First you need to setup your App on the <a title="Crypteron Dashboard" href="https://my.crypteron.com" target="_blank" rel="noopener noreferrer">Crypteron dashboard</a>. By default we register an App for you when you first create your Crypteron account. Select the App on the dashboard and in App Details you’ll find the App’s Secret Key. This is the API key securing all the key management API between your App and the Crypteron Service.</p>
+
+
+
+<p>NOTE: The App Secret is NOT your data encryption key(s) but you should still guard this API key.</p>
+
+
+
+<h2>Integrating CipherDB middleware<span class="ez-toc-section" id="Integrating_CipherDB_middleware"></span></h2>
+
+
+
+<p>Get the Crypteron Agent via NuGet. You can find them all <a href="https://my.crypteron.com/#/downloads" target="_blank" rel="noopener noreferrer">listed here</a>. Then you want to upgrade your existing generic Entity Framework class(es) to be powered by CipherDB. This step is slightly different depending on whether you are using Entity Framework code-first approach or the database-first approach.</p>
+
+
+
+<h3>Entity Framework – Database First<span class="ez-toc-section" id="Entity_Framework_Database_First-2"></span></h3>
+
+
+
+<p>Entity framework database first developers follow a workflow in which the Entity Framework automatically generates the Entity Framework class, say, MyAppEntities. Since it’s possible that Entity Framework may auto-generate that class again later, it’s best to leave that class untouched and instead add the integration code in a newer, inherited class, say, CipherDBEntities. This is shown below in the same code:</p>
+
+
+
+<pre class="code language-csharp"><code>using Crypteron.CipherCore;
+using Crypteron.CipherDB;
+
+public class CipherDBEntities : MyAppEntities
+{
+    public CipherDBEntities(string securityPartition = null, string asRole = null,)
+    {
+        // Activate CipherDB, specify security context. That's it!
+        Crypteron.CipherDB.Session.Create(this, securityPartition, asRole);
+    }
+}</code></pre>
+
+
+
+<h3>Entity Framework – Code First<span class="ez-toc-section" id="Entity_Framework_Code_First-2"></span></h3>
+
+
+
+<p>Entity framework code first developers follow a workflow in which they hand-write and maintain their entity Framework class, say, MyAppEntities. Due to this they can either add the integration code above directly into MyAppEntities or in an inherited class, say, CipherDBEntities. The performance is the same; it’s just a matter of preference.</p>
+
+
+
+<p>Now always use the CipherDB powered class (example CipherDBEntities) instead of the generic Entity Framework MyAppEntities class. The runtime usage is identical and CipherDB will manage encryption and all key management behind the scenes.</p>
+
+
+
+<h2>Stored Procedures and CipherDB<span class="ez-toc-section" id="Stored_Procedures_and_CipherDB"></span></h2>
+
+
+
+<p>CipherDB works just fine with stored procedures as long as one follows the general entity framework guidelines.</p>
+
+
+
+<ol><li>You must import the stored procedures into entity framework</li><li>After importing, the database-first approach still requires another step; importing it from the â&#128;&#156;storeâ&#128;&#157; into the â&#128;&#156;modelâ&#128;&#157;.
+<ol><li>Double click the EDMX file</li>
+<li>Go to Model Browser (if not visible, right click an empty area of the EDMX designer and select â&#128;&#156;Model Browserâ&#128;&#157;)</li>
+<li>Right click the stored procedure and choose â&#128;&#156;Add Function Import…â&#128;&#157;</li>
+<li>This moves it to the â&#128;&#156;Function Importsâ&#128;&#157; section as seen below<br><figure><a href="https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-ef-sp1.png"><img src="https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-ef-sp1.png" alt="CipherDB Stored Procedures" width="554" height="526"></a></figure></li>
+</ol></li><li>The inputs and outputs to the stored procedure must be â&#128;&#156;Entitiesâ&#128;&#157;. For example, to set the output to type â&#128;&#156;Entityâ&#128;&#157;, double click the stored procedure in â&#128;&#156;Function Importsâ&#128;&#157; and change to Entities as shown below<br><figure><a href="https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-ef-sp2.png"><img src="https://www2.crypteron.com/wp-content/uploads/cipherdb-dev-guide-ef-sp2.png" alt="CipherDB Stored Procedures" width="522" height="622"></a></figure></li><li>These entities are basically rows from your secure or non-secure tables.</li></ol><p>NOTE: For getting entities that are CipherDB secured your stored procedure must return the entire entity (i.e. must return the entire row). The stored procedure cannot simply return a small subset of fields (a subset of columns) because they wouldnâ&#128;&#153;t â&#128;&#156;fitâ&#128;&#157; the type of the Entity (and CipherDB will not decrypt it).</p>
+
+
+
+<h1>Configuration settings<span class="ez-toc-section" id="Configuration_settings"></span></h1>
+
+
+
+<p>Crypteron settings are configured either by code or by your application’s configuration file. Depending on whether you’re running .NET framework or .NET core, the process can be slightly different. </p>
+
+
+
+<p class="has-background has-luminous-vivid-amber-background-color"><strong>NOTE: Certain settings (e.g. BindRow or AllowNullsInSecureFields) shouldn’t be changed once useful data has been written as these settings have the same lifetime as the data they protect.</strong></p>
+
+
+
+<h2>.NET Core<span class="ez-toc-section" id="NET_Core"></span></h2>
+
+
+
+<p>.NET Core allows great flexibility in how settings are stored. We’ll cover only the JSON file configuration provider as a full discussion of various configuration providers is outside the scope of this document (but you can find details <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/">here</a>)</p>
+
+
+
+<p>You can have an <code>appsettings.json</code> file to which you can add the following Crypteron specific configuration values</p>
+
+
+
+<pre class="wp-block-code"><code>{
+  "CrypteronConfig": {
+    "MyCrypteronAccount": {
+      "AppSecret": "Replace_this_with_app_secret_from_https://my.crypteron.com"
+    }
+  }
+}</code></pre>
+
+
+
+<p>You then read this file and configure through code as follows</p>
+
+
+
+<pre class="code language-csharp"><code>using Microsoft.Extensions.Configuration;
+using System.IO;
+
+namespace YourNamespace
+{
+    class Program
+    {
+        public static void Main()
+        {
+            IConfiguration Configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            Crypteron.CrypteronConfig.Config.MyCrypteronAccount.AppSecret = 
+                Configuration["CrypteronConfig:MyCrypteronAccount:AppSecret"];
+            
+            // do work ...
+        }
+    }
+}</code></pre>
+
+
+
+<h2>.NET Framework<span class="ez-toc-section" id="NET_Framework"></span></h2>
+
+
+
+<p>For .NET Framework application, use the <code>web.config</code> file for ASP.NET web applications or the <code>app.config</code> file for standalone .NET application. Following the usual .NET Framework configuration pattern, there is a declaration in the followed by the actual configuration itself inside the <code><crypteronConfig></code> section. An illustrative example is shown below:</p>
+
+
+
+<pre class="code language-csharp"><code><?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- Declaration only, no customization -->
+    <section name="crypteronConfig" type="Crypteron.CrypteronConfig, CipherCore" requirePermission="false" />
+  </configSections>
+
+  <!-- Read docs below for explanations -->
+  <crypteronConfig>
+    <myCrypteronAccount appSecret="Replace this with App Secret from https://my.crypteron.com" />
+    <commonConfig securePrefix="Secure_" allowNullsInSecureFields="false" bindRow="true" />
+    <cipherDbConfig migrationPolicy="ReadOld" />
+    <debugLogs>
+      <debugLogFile logFilename="MyApp-CipherDB.log" filterLevel="Warning"/>
+      <debugConsole filterLevel="Information"/>
+    </debugLogs>
+  </crypteronConfig>
+</configuration></code></pre>
+
+
+
+<p>Note that you can also set any configuration option using the code pattern shown below. </p>
+
+
+
+<pre class="code language-csharp"><code>CrypteronConfig.Config.MyCrypteronAccount.AppSecret = "Replace_this_with_app_secret_from_https://my.crypteron.com";</code></pre>
+
+
+
+<p>Detailed information for various configuration parameters are documented below.</p>
+
+
+
+<h2><crypteronConfig><span class="ez-toc-section" id="i"></span></h2>
+
+
+
+<p>Within the configuration XML, this is the top-level element within with all other Crypteron specific configuration exists.</p>
+
+
+
+<h3><myCrypteronAccount><span class="ez-toc-section" id="i-2"></span></h3>
+
+
+
+<p> To register this app with your MyCrypteron account</p>
+
+
+
+<figure class="wp-block-table table table-striped table-bordered table-condensed"><table class=""><tbody><tr><td><strong> Name</strong></td><td> <strong>Example</strong></td><td> <strong>Description</strong></td></tr><tr><td> appSecret</td><td>appSecret=”EiB/xyx123abcdefghijklmnopqrstuvwxyz1234567890abcd==”</td><td>This is the what you obtain from your <a href="https://my.crypteron.com/">MyCrypteron management dashboard</a></td></tr></tbody></table></figure><h3><commonConfig><span class="ez-toc-section" id="i-3"></span></h3>
+
+
+
+<p>All common settings across the various Crypteron agent libraries are captured in this XML configuration element as follows:</p>
+
+
+
+<figure class="wp-block-table table table-striped table-bordered table-condensed"><table class=""><thead><tr><th>Name</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>securePrefix</td><td>securePrefix=”Secure_”</td><td>Objects or entities with properties or fields with this prefix (example: “Secure_CreditCard”) will be protected by Crypteron’s security pipeline. Properties or fields without this prefix (example: “ItemIdPK”) will flow in bypass mode outside the Crypteron Security pipeline.<b>Default: “Secure_”</b></td></tr><tr><td>allowNullsInSecureFields</td><td>allowNullsInSecureFields=”false”</td><td>Setting this to “true” means plaintext as well as ciphertext values of NULL are allowed. Some developers find permitting NULLs to be more flexible or practical (e.g. SQL column NULLs) but this is less secure since an attacker may silently erase data by writing NULLs without raising any alarms. This in turn is because NULLs cannot store any metadata needed to enforce integrity protection. Effectively NULLs are passed through as-is across both the decryption and encryption operations.
+<p>Setting this to “false” is more secure since Crypteron will now throw an exception if it find NULLs prior to decryption. We suggest using an empty string or empty byte array instead of NULL when writing. This way when plaintext is empty, it’s ciphertext is non-empty with helpful metadata that can enforce tamper protection checks next time decrypting it.</p>
+<strong>Default: false</strong></td></tr><tr><td>bindRow</td><td>bindRow=”true”</td><td>Row binding prevents careful manipulation of encrypted data by an attacker to change it’s meaning. Specifically, row binding applies strong cryptography to bind all the secure fields of a single row/entity together to mitigate a <em>ciphertext replacement</em> attack.
+<p>As an example: Imagine a law enforcement scenario where Suspect-A from Case-A simply copies encrypted field “Secure_SuspectName” from Case-B into Case-A. He overwrites his own name with someone else, without ever having to decrypt anything. Without row binding, this silent attack would effectively accuse Suspect-B and exonerate Suspect-A. Enabling this value increases security since an attack with cherry picked replacements will now raise a security exception when a property/field value is discovered that wasn’t part of the object/row at the instant the entire object/row was encrypted or sealed. Binding is performed on writes and verified on reads and adds about 16 bytes to the encrypted data.</p>
+<strong>Default: true</strong></td></tr></tbody></table></figure><h3><cipherDbConfig><span class="ez-toc-section" id="i-4"></span></h3>
+
+
+
+<p>All settings related to CipherDB are captured in this XML configuration element. It has several XML attributes as follows:</p>
+
+
+
+<figure class="wp-block-table table table-striped table-bordered table-condensed"><table class=""><thead><tr><th>Name</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>migrationPolicy</td><td>migrationPolicy=”ReadOld”</td><td>The latest version of a given key is always used when encrypting fresh data. migrationPolicy decides what happens when data encrypted by older versions of the encryption key is encountered.
+<p><b>Default: ReadOld</b></p>
+<p>Options are:</p>
+<p><b>NoOld</b>: Entities encrypted with any older key versions will be rejected i.e. NOT be decrypted. Rare but used in cases where older versions of encryption keys were compromised and data encrypted by those keys cannot be trusted anymore. Such data is encountered, it’s decrypted as NULLs to protect untrusted data from entering the application.</p>
+<p><b>ReadOld:</b> Most common case where data encrypted with older keys will be decrypted. CipherDB will not queue up any writes to migrate data to the latest data encryption key. This default mode allows you to issue new keys periodically, ensuring no single key every protects too much data.</p>
+<p><b>MigrateOnWrite: </b>Like ReadOld but also allows for live migration of entities from older key versions to the latest key version. The following conditions apply within this mode:</p>
+<ul><li>The application must issue a SaveChanges() within the same database context (e.g.: same using block) that read the older entity</li>
+<li>MigrationLimit, a separate configuration parameter, is a positive number</li>
+<li>The older version of the used key is accessible (i.e. the Security Partition ACLs allow access)</li>
+</ul>
+Behind the scenes, entities with older encryption keys are queued up for migration to the latest encryption key upon the <code>SaveChanges()</code>. Since this increases the database write times linearly with number of entities migrated and since it can happen in a live environment you use <code>MigrationLimit</code> to control the impact. Due to access patterns inherent in any application the most frequently used entities are migrated first and migration volume tapers off naturally.</td></tr><tr><td>migrationLimit</td><td>migrationLimit=”20″</td><td><b>Valid only for MigrationPolicy = MigrateOnWrite.</b>
+<p>This specifies how many database entities using the older encryption keys are tracked by CipherDB (upon read) for subsequent key migration related writes.Example: MigrationLimit is set to 20. Within a using block, the application reads 30 entities from the database out of which 25 are still on an older AES encryption key. CipherDB tracks the first 20. The application then decides to write 2 entities to the database, within the same using block as the read. At the instant of the application triggered write, CipherDB will write 2 (Application originated) + 20 (Application read, CipherDB tracked) = 22 entities into the database.</p>
+<b>Default: 20</b></td></tr></tbody></table></figure><h3><cipherStorConfig><span class="ez-toc-section" id="i-5"></span></h3>
+
+
+
+<p> All settings related to just CipherStor are captured in this XML configuration element. The XML attributes are as follows:<br></p>
+
+
+
+<figure class="wp-block-table table table-striped table-bordered table-condensed"><table class=""><tbody><tr><td><strong>Name</strong></td><td><strong>Example</strong></td><td><strong>Description</strong></td></tr><tr><td> <br>reportEventEveryXBytes </td><td> <br>reportEventEveryXBytes=”16000″ </td><td> <br>Determines after how many bytes of processing should CipherStor send an event to the callers to notify it.  <br><br><strong>Default: “0” (never)</strong> </td></tr></tbody></table></figure><div class="ttr_end"></div>			</div>
+</article></div>
+		<div class="col-md-3">
+			
+
+
+		</div>
+	</div>
+</div>
+		</div> 
+		<div id="recent-blog-posts">
+			<link rel="stylesheet" id="jquery-bxslider-css" href="https://www2.crypteron.com/wp-content/plugins/bb-plugin/css/jquery.bxslider.css" type="text/css" media="all"><link rel="stylesheet" id="fl-builder-layout-2892-css" href="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/2892-layout.css" type="text/css" media="all"><div class="fl-builder-content fl-builder-content-2892 fl-builder-template fl-builder-row-template fl-builder-global-templates-locked" data-post-id="2892"><div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-5903c2b03d4f5" data-node="5903c2b03d4f5">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-fixed-width fl-node-content">
+		
+<div class="fl-col-group fl-node-5903c2b03d372" data-node="5903c2b03d372">
+			<div class="fl-col fl-node-5903c2b03d3e4" data-node="5903c2b03d3e4">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-heading fl-node-5903c2b03d4be" data-node="5903c2b03d4be">
+	<div class="fl-module-content fl-node-content">
+		<h3 class="fl-heading">
+		<span class="fl-heading-text">Recent blog posts</span>
+	</h3>
+	</div>
+</div>
+<div id="footer-slider" class="fl-module fl-module-post-carousel fl-node-5903c2b03d41a" data-node="5903c2b03d41a">
+	<div class="fl-module-content fl-node-content">
+		
+	<div class="fl-post-carousel fl-post-carousel-grid" itemscope="itemscope" itemtype="https://schema.org/Blog">
+		<div class="fl-post-carousel-wrapper">
+			<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/migrating-existing-live-data-into-crypteron/" content="Migrating existing live data into Crypteron"><meta itemprop="datePublished" content="2018-09-19"><meta itemprop="dateModified" content="2020-02-05"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/sid-shetye/"><meta itemprop="name" content="Sid Shetye"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/encryption.jpeg"><meta itemprop="width" content="1920"><meta itemprop="height" content="1080"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="0"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpeg">
+				<a href="https://www2.crypteron.com/blog/migrating-existing-live-data-into-crypteron/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-3129 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/encryption-300x169-panorama.jpeg" alt="Encryption" itemprop="image" data-no-lazy="1" height="169" width="300" title="Encryption"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/migrating-existing-live-data-into-crypteron/" title="Migrating existing live data into Crypteron">Migrating existing live data into Crypteron</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>You’re already live in production. And you have sensitive in the clear. Read this article to see how Crypteron can help.</p>
+								</div>
+		
+	</div>
+
+</div>
+<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/encryption-entity-framework-and-projections/" content="Encryption, Entity Framework and Projections"><meta itemprop="datePublished" content="2017-08-22"><meta itemprop="dateModified" content="2018-09-21"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/sid-shetye/"><meta itemprop="name" content="Sid Shetye"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/code.jpeg"><meta itemprop="width" content="1280"><meta itemprop="height" content="853"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="0"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpeg">
+				<a href="https://www2.crypteron.com/blog/encryption-entity-framework-and-projections/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-2361 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/code-300x200-panorama.jpeg" alt="code" itemprop="image" data-no-lazy="1" height="200" width="300" title="code"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/encryption-entity-framework-and-projections/" title="Encryption, Entity Framework and Projections">Encryption, Entity Framework and Projections</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>Projections in Entity Framework live outside the entity lifecycle. Read more to learn how your can use Crypteron to secure such data.</p>
+								</div>
+		
+	</div>
+
+</div>
+<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/pci-dss-key-rotations-simplified/" content="PCI DSS and key rotations simplified"><meta itemprop="datePublished" content="2017-03-21"><meta itemprop="dateModified" content="2018-02-07"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/sid-shetye/"><meta itemprop="name" content="Sid Shetye"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/KeyManagement.jpg"><meta itemprop="width" content="1600"><meta itemprop="height" content="1065"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="0"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www2.crypteron.com/blog/pci-dss-key-rotations-simplified/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-2851 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/KeyManagement-300x200-panorama.jpg" alt="KeyManagement" itemprop="image" data-no-lazy="1" height="200" width="300" title="KeyManagement"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/pci-dss-key-rotations-simplified/" title="PCI DSS and key rotations simplified">PCI DSS and key rotations simplified</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>PCI compliance requires data encryption keys to be changed frequently. Here is how you can do it easily.</p>
+								</div>
+		
+	</div>
+
+</div>
+<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/your-data-center-is-not-secure/" content="Your data-center is not secure and what you can do about it"><meta itemprop="datePublished" content="2016-11-02"><meta itemprop="dateModified" content="2016-11-02"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/sid-shetye/"><meta itemprop="name" content="Sid Shetye"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/Google-Cloud-Exploitation-FeaturedImage-1.jpg"><meta itemprop="width" content="1952"><meta itemprop="height" content="723"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="0"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www2.crypteron.com/blog/your-data-center-is-not-secure/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-2681 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/Google-Cloud-Exploitation-FeaturedImage-1-300x111-panorama.jpg" alt="google-cloud-exploitation-featuredimage" itemprop="image" data-no-lazy="1" height="111" width="300" title="google-cloud-exploitation-featuredimage"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/your-data-center-is-not-secure/" title="Your data-center is not secure and what you can do about it">Your data-center is not secure and what you can do about it</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>There is no secure perimeter anymore. Neither in your corporate network nor in your data center. Fight a winning battle armed with self-protecting data rather than a losing one trying to protecting the infrastructure.</p>
+								</div>
+		
+	</div>
+
+</div>
+<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/startup-innovators-program/" content="Introducing the Crypteron Startup Innovators Program"><meta itemprop="datePublished" content="2016-10-25"><meta itemprop="dateModified" content="2018-07-18"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/sid-shetye/"><meta itemprop="name" content="Sid Shetye"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/startup-whiteboard.jpg"><meta itemprop="width" content="1800"><meta itemprop="height" content="1200"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="0"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www2.crypteron.com/blog/startup-innovators-program/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-2639 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/startup-whiteboard-300x200-panorama.jpg" alt="startup-whiteboard" itemprop="image" data-no-lazy="1" height="200" width="300" title="startup-whiteboard"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/startup-innovators-program/" title="Introducing the Crypteron Startup Innovators Program">Introducing the Crypteron Startup Innovators Program</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>Qualifying startups get up to 50% off all plans. Tell us how you’re changing the world and the our Startup Innovators Program will support your journey.</p>
+								</div>
+		
+	</div>
+
+</div>
+<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/the-real-problem-with-encryption/" content="6 encryption mistakes that lead to data breaches"><meta itemprop="datePublished" content="2016-10-20"><meta itemprop="dateModified" content="2018-10-31"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/yaron-guez/"><meta itemprop="name" content="Yaron Guez"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/banner.jpg"><meta itemprop="width" content="2000"><meta itemprop="height" content="1333"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="13"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www2.crypteron.com/blog/the-real-problem-with-encryption/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-1910 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/banner-300x200-panorama.jpg" alt="banner" itemprop="image" data-no-lazy="1" height="200" width="300" title="banner"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/the-real-problem-with-encryption/" title="6 encryption mistakes that lead to data breaches">6 encryption mistakes that lead to data breaches</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>If encryption is so unbreakable, why do businesses and governments keep getting hacked? Six common encryption mistakes that lead to data breaches.</p>
+								</div>
+		
+	</div>
+
+</div>
+<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/community-edition/" content="Announcing the new Crypteron Community Edition"><meta itemprop="datePublished" content="2016-08-01"><meta itemprop="dateModified" content="2020-01-01"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/yaron-guez/"><meta itemprop="name" content="Yaron Guez"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/community.jpg"><meta itemprop="width" content="1920"><meta itemprop="height" content="1280"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="3"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www2.crypteron.com/blog/community-edition/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-2243 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/community-300x200-panorama.jpg" alt="community" itemprop="image" data-no-lazy="1" height="200" width="300" title="community"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/community-edition/" title="Announcing the new Crypteron Community Edition">Announcing the new Crypteron Community Edition</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>Starting today you can now sign up for the Crypteron Community Edition for free with no performance limitations.</p>
+								</div>
+		
+	</div>
+
+</div>
+<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/data-breach-response-one-click-to-save-your-business/" content="Data breach response – One click to save your business"><meta itemprop="datePublished" content="2016-02-11"><meta itemprop="dateModified" content="2016-09-01"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/sid-shetye/"><meta itemprop="name" content="Sid Shetye"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/mouse.jpg"><meta itemprop="width" content="1280"><meta itemprop="height" content="959"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="0"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpg">
+				<a href="https://www2.crypteron.com/blog/data-breach-response-one-click-to-save-your-business/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-2351 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/mouse-300x225-panorama.jpg" alt="mouse" itemprop="image" data-no-lazy="1" height="225" width="300" title="mouse"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/data-breach-response-one-click-to-save-your-business/" title="Data breach response – One click to save your business">Data breach response – One click to save your business</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>Get breathing room – when you need it the most. Respond to a data breach with a single click.</p>
+								</div>
+		
+	</div>
+
+</div>
+<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/data-at-rest-encryption-voter-leak/" content="Why We Need Proper Data-At-Rest Encryption: 191M U.S. Voters’ Data Exposed"><meta itemprop="datePublished" content="2016-01-02"><meta itemprop="dateModified" content="2016-09-01"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/yaron-guez/"><meta itemprop="name" content="Yaron Guez"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/crowd.jpeg"><meta itemprop="width" content="1280"><meta itemprop="height" content="853"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="0"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpeg">
+				<a href="https://www2.crypteron.com/blog/data-at-rest-encryption-voter-leak/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-2359 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/crowd-300x200-panorama.jpeg" alt="crowd" itemprop="image" data-no-lazy="1" height="200" width="300" title="crowd"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/data-at-rest-encryption-voter-leak/" title="Why We Need Proper Data-At-Rest Encryption: 191M U.S. Voters’ Data Exposed">Why We Need Proper Data-At-Rest Encryption: 191M U.S. Voters’ Data Exposed</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>Adding security at the application level is a large step forward in protecting data from the constant threat of data breaches</p>
+								</div>
+		
+	</div>
+
+</div>
+<div class="fl-post-carousel-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+	<meta itemscope itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www2.crypteron.com/blog/how-to-encrypt-large-files/" content="How to encrypt large files"><meta itemprop="datePublished" content="2015-12-09"><meta itemprop="dateModified" content="2016-09-01"><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Crypteron"></div><div itemscope itemprop="author" itemtype="https://schema.org/Person"><meta itemprop="url" content="https://www2.crypteron.com/blog/author/sid-shetye/"><meta itemprop="name" content="Sid Shetye"></div><div itemscope itemprop="image" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://www2.crypteron.com/wp-content/uploads/code.jpeg"><meta itemprop="width" content="1280"><meta itemprop="height" content="853"></div><div itemprop="interactionStatistic" itemscope itemtype="https://schema.org/InteractionCounter"><meta itemprop="interactionType" content="https://schema.org/CommentAction"><meta itemprop="userInteractionCount" content="0"></div>
+		<div class="fl-post-carousel-image">
+		<div class="fl-photo fl-photo-crop-panorama fl-photo-align-center" itemscope itemtype="https://schema.org/ImageObject">
+	<div class="fl-photo-content fl-photo-img-jpeg">
+				<a href="https://www2.crypteron.com/blog/how-to-encrypt-large-files/" target="_self" itemprop="url">
+				<img class="fl-photo-img wp-image-2361 size-medium" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/code-300x200-panorama.jpeg" alt="code" itemprop="image" data-no-lazy="1" height="200" width="300" title="code"></a>
+					</div>
+	</div>
+	</div>
+	
+	<div class="fl-post-carousel-text">
+
+		<h2 class="fl-post-carousel-title" itemprop="headline">
+			<a href="https://www2.crypteron.com/blog/how-to-encrypt-large-files/" title="How to encrypt large files">How to encrypt large files</a>
+		</h2>
+
+		
+				<div class="fl-post-carousel-content">
+							<p>CipherStor is blazingly fast! Here we show how to use it within your data-flow pipeline to maintain high performance when encrypting large files.</p>
+								</div>
+		
+	</div>
+
+</div>
+		</div>
+			</div>
+
+	<div class="fl-clear"></div>
+
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+</div>		</div>
+		<footer id="colophon" class="site-footer" role="contentinfo"><link rel="stylesheet" id="fl-builder-layout-2459-css" href="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/2459-layout-partial.css" type="text/css" media="all"><div class="fl-builder-content fl-builder-content-2459 fl-builder-template fl-builder-row-template fl-builder-global-templates-locked" data-post-id="2459"><div class="fl-row fl-row-full-width fl-row-bg-none fl-node-57e07adfe5ec1 purple-section" data-node="57e07adfe5ec1">
+	<div class="fl-row-content-wrap">
+						<div class="fl-row-content fl-row-fixed-width fl-node-content">
+		
+<div class="fl-col-group fl-node-5903ad1d246bc" data-node="5903ad1d246bc">
+			<div class="fl-col fl-node-5903bcb10ffc7 fl-col-small" data-node="5903bcb10ffc7">
+	<div class="fl-col-content fl-node-content">
+		</div>
+</div>
+			<div class="fl-col fl-node-59038f2768dee fl-col-small" data-node="59038f2768dee">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-heading fl-node-59038f2dc665a" data-node="59038f2dc665a">
+	<div class="fl-module-content fl-node-content">
+		<h3 class="fl-heading">
+		<span class="fl-heading-text">Company</span>
+	</h3>
+	</div>
+</div>
+<div class="fl-module fl-module-rich-text fl-node-590392655d51d footer-list footer-list-icons" data-node="590392655d51d">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-rich-text">
+	<ul><li><a href="https://www2.crypteron.com/team/"><i class="fa fa-group"></i> Executive Team</a></li>
+<li><a href="https://www2.crypteron.com/contact/"><i class="fa fa-comments"></i> Contact us</a></li>
+</ul></div>
+	</div>
+</div>
+	</div>
+</div>
+			<div class="fl-col fl-node-5903ad36efd60 fl-col-small" data-node="5903ad36efd60">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-heading fl-node-5903ad4bf1c6b" data-node="5903ad4bf1c6b">
+	<div class="fl-module-content fl-node-content">
+		<h3 class="fl-heading">
+		<span class="fl-heading-text">Legal</span>
+	</h3>
+	</div>
+</div>
+<div class="fl-module fl-module-rich-text fl-node-5903ad5d0c4b2 footer-list" data-node="5903ad5d0c4b2">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-rich-text">
+	<ul><li><a href="https://www2.crypteron.com/terms-of-service/">Terms of Service</a></li>
+<li><a href="https://www2.crypteron.com/privacy-policy/">Privacy Policy</a></li>
+</ul></div>
+	</div>
+</div>
+	</div>
+</div>
+			<div class="fl-col fl-node-5903ad36efdaa fl-col-small" data-node="5903ad36efdaa">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-heading fl-node-5903ae79a2a7f" data-node="5903ae79a2a7f">
+	<div class="fl-module-content fl-node-content">
+		<h3 class="fl-heading">
+		<span class="fl-heading-text">Social</span>
+	</h3>
+	</div>
+</div>
+<div class="fl-module fl-module-rich-text fl-node-5903ae9eca937 footer-list footer-list-icons" data-node="5903ae9eca937">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-rich-text">
+	<ul><li><a href="https://twitter.com/Crypteron" target="_blank" rel="noopener"><i class="fa fa-twitter"></i> Twitter</a></li>
+<li><a href="https://www.facebook.com/CrypteronInc/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i> Facebook</a></li>
+<li><a href="https://www.linkedin.com/company/crypteron" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+</ul></div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+
+<div class="fl-col-group fl-node-57e07adfe5c75" data-node="57e07adfe5c75">
+			<div class="fl-col fl-node-57e07adfe5dac" data-node="57e07adfe5dac">
+	<div class="fl-col-content fl-node-content">
+	<div class="fl-module fl-module-rich-text fl-node-57e07adfe5de5 copyright" data-node="57e07adfe5de5">
+	<div class="fl-module-content fl-node-content">
+		<div class="fl-rich-text">
+	<p style="text-align: center;">Â© Crypteronâ&#132;¢ 2013 and protected by one or more patents.<br>
+Crypteron, CipherDB, CipherStor, CipherObject, TotalAuth and DosCipher are all trademarks of Crypteron Inc. All rights reserved.</p>
+</div>
+	</div>
+</div>
+	</div>
+</div>
+	</div>
+		</div>
+	</div>
+</div>
+</div>		</footer><div class="white-popup mfp-hide small-popup" id="register">
+		<div class="modal-header">
+			<h3>Try Crypteron for Free!</h3>
+		</div>
+		<div class="modal-body">
+			                <div id="register-error" class="alert alert-danger" role="alert" style="display: none;"></div>
+                <div id="register-success" class="alert alert-success" role="alert" style="display: none;">
+				  <p>Registration is almost complete!  We sent an email to:<br><strong id="register-email"></strong></p>
+				  <p>Please check your email to activate your account. If you do not receive an email, please <a href="mailto:support@crypteron.com">contact support</a>.</p>				  
+				</div>
+                <form name="register-form" id="register-form" class="register-form">
+                    <div class="form-group">
+						<label for="register-email">Email</label>
+						<input type="email" id="register-email" name="Email" class="form-control input-lg" required="required" placeholder="Please enter your work email address"></div>
+                    <div class="form-group phone-number hide-on-close" style="display:none;">
+                        <label for="register-phone">Phone Number</label>
+                        <input type="tel" id="register-telephone" name="PhoneNumber" class="form-control input-lg" required="required" placeholder="Please enter your work phone number" disabled></div>
+                    <h4 class="text-center" id="extra-help" style="margin-top:8px;"></h4>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" required="required" name="TermsOfService" id="register-terms" value="true"> I agree to the Crypteron <a href="https://www2.crypteron.com/terms-of-service" title="Terms of Service" target="_blank">Terms of Service</a>
+                        </label>
+                    </div>
+                    <input type="hidden" value="true" name="EmailOptIn"><input type="hidden" value="freetrial" name="PromoCodeAtSignup"><input type="hidden" value="0" name="PlanAtSignup"><input type="hidden" value="" name="Campaign"><input type="hidden" value="" name="DistinctId" class="mixpanel-distinct-id"><div class="form-footer">
+                        <div class="loader-container"><div class="loader"></div></div>
+                        <button class="btn btn-success btn-lg" type="submit" id="register-submit">Sign Up!</button>
+                        <button class="btn btn-danger btn-lg close-modal">Cancel</button>
+                    </div>
+               </form>
+			   <div id="register-ok" style="display:none;">
+					<button class="btn btn-success btn-lg close-modal">OK</button>
+			   </div>
+		</div>
+</div>
+		<script type="text/javascript">
+		    //<![CDATA[
+		    jQuery(function () {
+  jQuery('[data-toggle="popover"]').popover();
+});		    //]]>
+		</script></div> 
+
+	
+	<style type="text/css">
+			</style><div class="gdpr gdpr-overlay"></div>
+<div class="gdpr gdpr-privacy-bar" style="display:none;">
+	<div class="gdpr-wrapper">
+		<div class="gdpr-content">
+			<p>We use cookies to deliver a better experience</p>
+		</div>
+		<div class="gdpr-right">
+						<div class="gdpr-buttons">
+				<button class="gdpr-preferences" type="button">Privacy Preferences</button>
+				<button class="gdpr-agreement" type="button">I Agree</button>
+			</div>
+			<span class="gdpr-close"></span>
+		</div>
+	</div>
+</div>
+
+<div class="gdpr gdpr-privacy-preferences">
+	<div class="gdpr-wrapper">
+		<form method="post" class="gdpr-privacy-preferences-frm">
+			<input type="hidden" name="action" value="gdpr_update_privacy_preferences"><input type="hidden" id="update-privacy-preferences-nonce" name="update-privacy-preferences-nonce" value="8d2ab85152"><input type="hidden" name="_wp_http_referer" value="/developers-guide/cipherdb/dotnet/"><header><div class="gdpr-box-title">
+					<h3>Privacy Preference Center</h3>
+					<span class="gdpr-close"></span>
+				</div>
+			</header><div class="gdpr-mobile-menu">
+				<button type="button">Options</button>
+			</div>
+			<div class="gdpr-content">
+				<div class="gdpr-tabs">
+					<ul class=""><li><button type="button" class="gdpr-tab-button gdpr-active" data-target="gdpr-consent-management">Consent Management</button></li>
+																			<li><button type="button" class="gdpr-tab-button gdpr-cookie-settings" data-target="required">Cookie Settings</button>
+								<ul class="gdpr-subtabs"><li><button type="button" data-target="required">Required</button></li><li><button type="button" data-target="marketing">Marketing</button></li>								</ul></li>
+											</ul><ul class="gdpr-policies"><li><a href="https://www2.crypteron.com/privacy-policy/" target="_blank">Privacy Policy</a></li>
+																		</ul></div>
+				<div class="gdpr-tab-content">
+					<div class="gdpr-consent-management gdpr-active">
+						<header><h4>Consent Management</h4>
+						</header><div class="gdpr-info">
+							<p>We do not sell your data to anyone</p>
+																								<div class="gdpr-cookies-used">
+										<div class="gdpr-cookie-title">
+											<p>Privacy Policy</p>
+																							<span class="gdpr-always-active">Required</span>
+												<input type="hidden" name="user_consents[]" value="privacy-policy" checked style="display:none;"></div>
+										<div class="gdpr-cookies">
+											<span>You read and agreed to our <a href="https://www2.crypteron.com/privacy-policy/" target="_blank">Privacy Policy</a>.</span>
+										</div>
+									</div>
+																					</div>
+					</div>
+																<div class="required">
+							<header><h4>Required</h4>
+							</header><div class="gdpr-info">
+								<p>Required for us to operate the site properly</p>
+																	<div class="gdpr-cookies-used">
+										<div class="gdpr-cookie-title">
+											<p>Cookies Used</p>
+																																		<span class="gdpr-always-active">Required</span>
+												<input type="hidden" name="approved_cookies[]" value='["gdpr[consent_types]","wpfront-notification-bar-landingpage","gdpr[allowed_cookies]","gdprprivacy_bar","__cfduid","driftt_aid","driftt_sid","driftt_wmd","DFTT_END_USER_PREV_BOOTSTRAPPED","_js_reg_fb_ref","datr","reg_ext_ref","reg_fb_gate","sb","wd","IDE","_ga","_gat","_gid","OGPC","APISID","GMAIL_RTT","HSID","OGPC","AID","__ar_v4","gaScrollPos","UULE","mp_","1P_JAR","NID"]'></div>
+										<div class="gdpr-cookies">
+											<span>gdpr[consent_types],wpfront-notification-bar-landingpage,gdpr[allowed_cookies],gdprprivacy_bar,__cfduid,driftt_aid,driftt_sid,driftt_wmd,DFTT_END_USER_PREV_BOOTSTRAPPED, _js_reg_fb_ref, datr, reg_ext_ref, reg_fb_gate, sb, wd, IDE, _ga, _gat, _gid, OGPC, APISID, GMAIL_RTT, HSID, OGPC, AID, __ar_v4, gaScrollPos, UULE, mp_, 1P_JAR, NID</span>
+										</div>
+									</div>
+																																			<div class="gdpr-cookies-used">
+											<div class="gdpr-cookie-title">
+												<p>google.com</p>
+												<a href="https://policies.google.com/privacy?hl=en" target="_blank" class="gdpr-button">Opt Out</a>
+											</div>
+											<div class="gdpr-cookies">
+												<span>1P_JAR, NID</span>
+											</div>
+										</div>
+																								</div>
+						</div>
+											<div class="marketing">
+							<header><h4>Marketing</h4>
+							</header><div class="gdpr-info">
+								<p>To determine what our users appreciate</p>
+																																			<div class="gdpr-cookies-used">
+											<div class="gdpr-cookie-title">
+												<p>facebook.com</p>
+												<a href="https://en-gb.facebook.com/policies/cookies/" target="_blank" class="gdpr-button">Opt Out</a>
+											</div>
+											<div class="gdpr-cookies">
+												<span>fr</span>
+											</div>
+										</div>
+																								</div>
+						</div>
+									</div>
+				<input type="hidden" name="all_cookies" value='["gdpr[consent_types]","wpfront-notification-bar-landingpage","gdpr[allowed_cookies]","gdprprivacy_bar","__cfduid","driftt_aid","driftt_sid","driftt_wmd","DFTT_END_USER_PREV_BOOTSTRAPPED","_js_reg_fb_ref","datr","reg_ext_ref","reg_fb_gate","sb","wd","IDE","_ga","_gat","_gid","OGPC","APISID","GMAIL_RTT","HSID","OGPC","AID","__ar_v4","gaScrollPos","UULE","mp_","1P_JAR","NID"]'></div>
+			<footer><input type="submit" value="Save Preferences"></footer></form>
+	</div>
+</div>
+
+<div class="gdpr gdpr-general-confirmation">
+	<div class="gdpr-wrapper">
+		<header><div class="gdpr-box-title">
+				<h3></h3>
+				<span class="gdpr-close"></span>
+			</div>
+		</header><div class="gdpr-content">
+			<p></p>
+		</div>
+		<footer><button class="gdpr-ok">OK</button>
+		</footer></div>
+</div>
+<style type="text/css">
+            h2.frq-main-title{
+               font-size: 18px;
+            }
+            .hrf-entry{
+               border:none !important;
+               margin-bottom: 0px !important;
+               padding-bottom: 0px !important;
+            }
+            .hrf-content{
+               display:none;
+               color: #444444;
+               background: #ffffff;
+               font-size: 14px;
+               padding: 10px;
+               padding-left: 50px;
+               word-break: normal;
+            }
+            h3.hrf-title{
+               font-size: 18px ;
+               color: #444444;
+               background: #ffffff;
+               padding: 10px ;
+               padding-left: 50px;
+               margin: 0;
+               -webkit-touch-callout: none;
+               -webkit-user-select: none;
+               -khtml-user-select: none;
+               -moz-user-select: none;
+               -ms-user-select: none;
+               user-select: none;
+               outline-style:none;
+            }
+            .hrf-title.close-faq{
+               cursor: pointer;
+            }
+            .hrf-title.close-faq span{
+               width: 30px;
+               height: 30px;
+               display: inline-block;
+               position: relative;
+               left: 0;
+               top: 8px;
+               margin-right: 12px;
+               margin-left: -42px;
+               background: #444444 url(https://www2.crypteron.com/wp-content/plugins/html5-responsive-faq/images/open.png) no-repeat center center;
+            }
+            }.hrf-title.open-faq{
+            
+            }
+            .hrf-title.open-faq span{
+               width: 30px;
+               height: 30px;
+               display: inline-block;
+               position: relative;
+               left: 0;
+               top: 8px;
+               margin-right: 12px;
+               margin-left: -42px;
+               background: #444444 url(https://www2.crypteron.com/wp-content/plugins/html5-responsive-faq/images/close.png) no-repeat center center;
+            }
+            .hrf-entry p{
+            
+            }
+            .hrf-entry ul{
+            
+            }
+            .hrf-entry ul li{
+            
+            }</style><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/sg-cachepress/assets/js/lazysizes.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/bower_components/bootstrap/dist/js/bootstrap.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/js/bootstrap-wp.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/js/ie10-viewport-bug-workaround.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/js/android-browser-bug-workaround.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/js/prism.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/bower_components/bower-skrollr/skrollr.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/js/skrollr.menu.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/bower_components/waypoints/lib/jquery.waypoints.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/bower_components/waypoints/lib/shortcuts/sticky.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/js/jquery.magnific-popup.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var Crypteron_Vars = {"api_url":"https:\/\/api.crypteron.com\/v1"};
+/* ]]> */
+</script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/js/main.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/js/skip-link-focus-fix.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/themes/crypteron/includes/js/last.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/easy-table-of-contents/vendor/smooth-scroll/jquery.smooth-scroll.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var ezTOC = {"smooth_scroll":"1","visibility_hide_by_default":"","width":"auto","scroll_offset":"30"};
+/* ]]> */
+</script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/bb-plugin/js/jquery.easing.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/bb-plugin/js/jquery.fitvids.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/plugins/bb-plugin/js/jquery.bxslider.min.js"></script><script type="text/javascript" src="https://www2.crypteron.com/wp-content/uploads/bb-plugin/cache/2892-layout.js"></script></body></html>

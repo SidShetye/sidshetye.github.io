@@ -1,0 +1,10 @@
+.fl-builder-row-settings .fl-field-responsive-setting input[name="bg_position_custom_right"], .fl-builder-row-settings .fl-field-responsive-setting input[name="bg_position_custom_left"] {display: none !important;}
+.fl-node-560ef1c336f0a .fl-bg-video-audio {display: none;cursor: pointer;position: absolute;bottom: 20px;right: 20px;z-index: 5;width: 20px;}
+.fl-node-560ef1c336f0a .fl-bg-video-audio .fl-audio-control {font-size: 20px;}
+.fl-node-560ef1c336f0a .fl-bg-video-audio .fa-times {font-size: 10px;vertical-align: middle;position: absolute;top: 5px;left: 11px;bottom: 0;}
+.fl-node-560ef1c336f0a > .fl-row-content-wrap {border-top-width: 1px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+.fl-node-560ef1c340ca2 {width: 100%;}
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
