@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>In The News &#8211; Crypteron</title>
+	<atom:link href="/blog/category/in-the-news/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Wed, 05 Feb 2020 19:54:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>Introducing the Crypteron Startup Innovators Program</title>
+		<link>/blog/startup-innovators-program/</link>
+					<comments>/blog/startup-innovators-program/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Tue, 25 Oct 2016 19:07:08 +0000</pubDate>
+				<category><![CDATA[Developer notes]]></category>
+		<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=2606</guid>
+
+					<description><![CDATA[Qualifying startups get up to 50% off all plans. Tell us how you're changing the world and the our Startup Innovators Program will support your journey.]]></description>
+		
+					<wfw:commentRss>/blog/startup-innovators-program/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Announcing the new Crypteron Community Edition</title>
+		<link>/blog/community-edition/</link>
+					<comments>/blog/community-edition/#comments</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Mon, 01 Aug 2016 17:33:48 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=2318</guid>
+
+					<description><![CDATA[Starting today you can now sign up for the Crypteron Community Edition for free with no performance limitations.]]></description>
+		
+					<wfw:commentRss>/blog/community-edition/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Why We Need Proper Data-At-Rest Encryption: 191M U.S. Voters&#8217; Data Exposed</title>
+		<link>/blog/data-at-rest-encryption-voter-leak/</link>
+					<comments>/blog/data-at-rest-encryption-voter-leak/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Sat, 02 Jan 2016 23:37:34 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=1752</guid>
+
+					<description><![CDATA[Adding security at the application level is a large step forward in protecting data from the constant threat of data breaches]]></description>
+		
+					<wfw:commentRss>/blog/data-at-rest-encryption-voter-leak/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Data-Centric Security: The Way Forward</title>
+		<link>/blog/data-centric-security-the-way-forward/</link>
+					<comments>/blog/data-centric-security-the-way-forward/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Mon, 16 Nov 2015 01:19:51 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=1626</guid>
+
+					<description><![CDATA[Properly implemented encryption holds the key to a robust data-centric approach to security.]]></description>
+		
+					<wfw:commentRss>/blog/data-centric-security-the-way-forward/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Licenses under the hood</title>
+		<link>/blog/licenses-under-the-hood/</link>
+					<comments>/blog/licenses-under-the-hood/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Fri, 09 Oct 2015 23:07:43 +0000</pubDate>
+				<category><![CDATA[CipherDB]]></category>
+		<category><![CDATA[Developer notes]]></category>
+		<category><![CDATA[Frequently Asked Questions]]></category>
+		<category><![CDATA[In The News]]></category>
+		<category><![CDATA[Products]]></category>
+		<guid isPermaLink="false">/?p=1352</guid>
+
+					<description><![CDATA[A closer look at the licensing of various libraries used by Crypteron.]]></description>
+		
+					<wfw:commentRss>/blog/licenses-under-the-hood/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>4.6 million reasons to rethink Cybersecurity: Scottrade gets hacked</title>
+		<link>/blog/4-6-million-reasons-to-rethink-cybersecurity-scottrade-gets-hacked/</link>
+					<comments>/blog/4-6-million-reasons-to-rethink-cybersecurity-scottrade-gets-hacked/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Fri, 02 Oct 2015 23:02:15 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<category><![CDATA[data breach]]></category>
+		<category><![CDATA[hack]]></category>
+		<category><![CDATA[scottrade]]></category>
+		<guid isPermaLink="false">/?p=1311</guid>
+
+					<description><![CDATA[This recent data breach points to what's not working in cybersecurity, highlighting an urgent need for seamless, data-centric security.]]></description>
+		
+					<wfw:commentRss>/blog/4-6-million-reasons-to-rethink-cybersecurity-scottrade-gets-hacked/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Experian Data Breach Exposes 15 million T-Mobile records: The Crucial Takeaway</title>
+		<link>/blog/experian-data-breach-exposes-15-million-t-mobile-records/</link>
+					<comments>/blog/experian-data-breach-exposes-15-million-t-mobile-records/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Thu, 01 Oct 2015 21:26:28 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<category><![CDATA[data breach]]></category>
+		<category><![CDATA[experian]]></category>
+		<category><![CDATA[hack]]></category>
+		<category><![CDATA[tmobile]]></category>
+		<guid isPermaLink="false">/?p=1271</guid>
+
+					<description><![CDATA[Experian is hacked, 15 million T-Mobile customers affected. How does this incident affect the cybersecurity discussion?]]></description>
+		
+					<wfw:commentRss>/blog/experian-data-breach-exposes-15-million-t-mobile-records/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>The Clinton Private Server Under Attack: Critical Lessons in Data Security</title>
+		<link>/blog/the-clinton-private-server-under-attack/</link>
+					<comments>/blog/the-clinton-private-server-under-attack/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Wed, 30 Sep 2015 15:29:37 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<category><![CDATA[breaking news clinton]]></category>
+		<category><![CDATA[clinton]]></category>
+		<category><![CDATA[clinton private email]]></category>
+		<category><![CDATA[clinton's private server]]></category>
+		<category><![CDATA[data breach]]></category>
+		<category><![CDATA[hack]]></category>
+		<category><![CDATA[news]]></category>
+		<category><![CDATA[russia]]></category>
+		<category><![CDATA[russia-linked hackers]]></category>
+		<category><![CDATA[server]]></category>
+		<guid isPermaLink="false">/?p=1230</guid>
+
+					<description><![CDATA[Russia-linked hackers were found in the Clinton private server. This can teach us a thing or two about data security.]]></description>
+		
+					<wfw:commentRss>/blog/the-clinton-private-server-under-attack/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Crypteron introduces secure, searchable encryption</title>
+		<link>/blog/practical-searchable-encryption-and-security/</link>
+					<comments>/blog/practical-searchable-encryption-and-security/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Thu, 30 Apr 2015 17:41:39 +0000</pubDate>
+				<category><![CDATA[Developer notes]]></category>
+		<category><![CDATA[Frequently Asked Questions]]></category>
+		<category><![CDATA[In The News]]></category>
+		<category><![CDATA[Products]]></category>
+		<guid isPermaLink="false">/?p=660</guid>
+
+					<description><![CDATA[Learn how to easily search encrypted data without sacrificing security.]]></description>
+		
+					<wfw:commentRss>/blog/practical-searchable-encryption-and-security/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

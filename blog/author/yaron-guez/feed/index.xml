@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Yaron Guez &#8211; Crypteron</title>
+	<atom:link href="/blog/author/yaron-guez/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Thu, 02 Jan 2020 04:39:50 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>6 encryption mistakes that lead to data breaches</title>
+		<link>/blog/the-real-problem-with-encryption/</link>
+					<comments>/blog/the-real-problem-with-encryption/#comments</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Thu, 20 Oct 2016 19:01:56 +0000</pubDate>
+				<category><![CDATA[Developer notes]]></category>
+		<guid isPermaLink="false">/?p=1484</guid>
+
+					<description><![CDATA[If encryption is so unbreakable, why do businesses and governments keep getting hacked? Six common encryption mistakes that lead to data breaches.]]></description>
+		
+					<wfw:commentRss>/blog/the-real-problem-with-encryption/feed/</wfw:commentRss>
+			<slash:comments>18</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Announcing the new Crypteron Community Edition</title>
+		<link>/blog/community-edition/</link>
+					<comments>/blog/community-edition/#comments</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Mon, 01 Aug 2016 17:33:48 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=2318</guid>
+
+					<description><![CDATA[Starting today you can now sign up for the Crypteron Community Edition for free with no performance limitations.]]></description>
+		
+					<wfw:commentRss>/blog/community-edition/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Why We Need Proper Data-At-Rest Encryption: 191M U.S. Voters&#8217; Data Exposed</title>
+		<link>/blog/data-at-rest-encryption-voter-leak/</link>
+					<comments>/blog/data-at-rest-encryption-voter-leak/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Sat, 02 Jan 2016 23:37:34 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=1752</guid>
+
+					<description><![CDATA[Adding security at the application level is a large step forward in protecting data from the constant threat of data breaches]]></description>
+		
+					<wfw:commentRss>/blog/data-at-rest-encryption-voter-leak/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Data-Centric Security: The Way Forward</title>
+		<link>/blog/data-centric-security-the-way-forward/</link>
+					<comments>/blog/data-centric-security-the-way-forward/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Mon, 16 Nov 2015 01:19:51 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=1626</guid>
+
+					<description><![CDATA[Properly implemented encryption holds the key to a robust data-centric approach to security.]]></description>
+		
+					<wfw:commentRss>/blog/data-centric-security-the-way-forward/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>What the Biggest Data Breaches in Retail have taught us about Cybersecurity</title>
+		<link>/blog/what-the-biggest-data-breaches-in-retail-have-taught-us-about-cybersecurity/</link>
+					<comments>/blog/what-the-biggest-data-breaches-in-retail-have-taught-us-about-cybersecurity/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Sat, 14 Nov 2015 23:23:58 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">/?p=1621</guid>
+
+					<description><![CDATA[The retail sector has fallen victim to a large number of data breaches. We take a closer look at a few examples with some key takeaways.]]></description>
+		
+					<wfw:commentRss>/blog/what-the-biggest-data-breaches-in-retail-have-taught-us-about-cybersecurity/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>4.6 million reasons to rethink Cybersecurity: Scottrade gets hacked</title>
+		<link>/blog/4-6-million-reasons-to-rethink-cybersecurity-scottrade-gets-hacked/</link>
+					<comments>/blog/4-6-million-reasons-to-rethink-cybersecurity-scottrade-gets-hacked/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Fri, 02 Oct 2015 23:02:15 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<category><![CDATA[data breach]]></category>
+		<category><![CDATA[hack]]></category>
+		<category><![CDATA[scottrade]]></category>
+		<guid isPermaLink="false">/?p=1311</guid>
+
+					<description><![CDATA[This recent data breach points to what's not working in cybersecurity, highlighting an urgent need for seamless, data-centric security.]]></description>
+		
+					<wfw:commentRss>/blog/4-6-million-reasons-to-rethink-cybersecurity-scottrade-gets-hacked/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Experian Data Breach Exposes 15 million T-Mobile records: The Crucial Takeaway</title>
+		<link>/blog/experian-data-breach-exposes-15-million-t-mobile-records/</link>
+					<comments>/blog/experian-data-breach-exposes-15-million-t-mobile-records/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Thu, 01 Oct 2015 21:26:28 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<category><![CDATA[data breach]]></category>
+		<category><![CDATA[experian]]></category>
+		<category><![CDATA[hack]]></category>
+		<category><![CDATA[tmobile]]></category>
+		<guid isPermaLink="false">/?p=1271</guid>
+
+					<description><![CDATA[Experian is hacked, 15 million T-Mobile customers affected. How does this incident affect the cybersecurity discussion?]]></description>
+		
+					<wfw:commentRss>/blog/experian-data-breach-exposes-15-million-t-mobile-records/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>The Clinton Private Server Under Attack: Critical Lessons in Data Security</title>
+		<link>/blog/the-clinton-private-server-under-attack/</link>
+					<comments>/blog/the-clinton-private-server-under-attack/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Wed, 30 Sep 2015 15:29:37 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<category><![CDATA[breaking news clinton]]></category>
+		<category><![CDATA[clinton]]></category>
+		<category><![CDATA[clinton private email]]></category>
+		<category><![CDATA[clinton's private server]]></category>
+		<category><![CDATA[data breach]]></category>
+		<category><![CDATA[hack]]></category>
+		<category><![CDATA[news]]></category>
+		<category><![CDATA[russia]]></category>
+		<category><![CDATA[russia-linked hackers]]></category>
+		<category><![CDATA[server]]></category>
+		<guid isPermaLink="false">/?p=1230</guid>
+
+					<description><![CDATA[Russia-linked hackers were found in the Clinton private server. This can teach us a thing or two about data security.]]></description>
+		
+					<wfw:commentRss>/blog/the-clinton-private-server-under-attack/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Migrating a CipherDB App from AES-128 to AES-256 encryption</title>
+		<link>/blog/migrating-cipherdb-app-from-aes-128-to-aes-256/</link>
+					<comments>/blog/migrating-cipherdb-app-from-aes-128-to-aes-256/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Wed, 22 Apr 2015 00:54:29 +0000</pubDate>
+				<category><![CDATA[CipherDB]]></category>
+		<category><![CDATA[Frequently Asked Questions]]></category>
+		<guid isPermaLink="false">/?p=620</guid>
+
+					<description><![CDATA[Learn how to migrate your app AES-128 to AES-256 encryption.]]></description>
+		
+					<wfw:commentRss>/blog/migrating-cipherdb-app-from-aes-128-to-aes-256/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>CipherDB could have Stopped Uber’s Data Breach</title>
+		<link>/blog/cipherdb-could-have-stopped-ubers-data-breach/</link>
+					<comments>/blog/cipherdb-could-have-stopped-ubers-data-breach/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Mon, 09 Mar 2015 19:01:35 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://crypteron.com/?p=496</guid>
+
+					<description><![CDATA[Uber left database keys in a public GitHub repo allowing unauthorized access.]]></description>
+		
+					<wfw:commentRss>/blog/cipherdb-could-have-stopped-ubers-data-breach/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

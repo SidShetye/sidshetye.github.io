@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>server &#8211; Crypteron</title>
+	<atom:link href="/blog/tag/server/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Fri, 09 Oct 2015 20:01:01 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>The Clinton Private Server Under Attack: Critical Lessons in Data Security</title>
+		<link>/blog/the-clinton-private-server-under-attack/</link>
+					<comments>/blog/the-clinton-private-server-under-attack/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Wed, 30 Sep 2015 15:29:37 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<category><![CDATA[breaking news clinton]]></category>
+		<category><![CDATA[clinton]]></category>
+		<category><![CDATA[clinton private email]]></category>
+		<category><![CDATA[clinton's private server]]></category>
+		<category><![CDATA[data breach]]></category>
+		<category><![CDATA[hack]]></category>
+		<category><![CDATA[news]]></category>
+		<category><![CDATA[russia]]></category>
+		<category><![CDATA[russia-linked hackers]]></category>
+		<category><![CDATA[server]]></category>
+		<guid isPermaLink="false">/?p=1230</guid>
+
+					<description><![CDATA[Russia-linked hackers were found in the Clinton private server. This can teach us a thing or two about data security.]]></description>
+		
+					<wfw:commentRss>/blog/the-clinton-private-server-under-attack/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

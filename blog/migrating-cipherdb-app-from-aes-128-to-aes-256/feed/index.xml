@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Migrating a CipherDB App from AES-128 to AES-256 encryption	</title>
+	<atom:link href="/blog/migrating-cipherdb-app-from-aes-128-to-aes-256/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/migrating-cipherdb-app-from-aes-128-to-aes-256/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Mon, 13 Jul 2015 23:32:22 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+</channel>
+</rss>

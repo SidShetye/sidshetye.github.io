@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CipherStor &#8211; Crypteron</title>
+	<atom:link href="/blog/category/products/cipherstor/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Wed, 05 Feb 2020 19:40:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>How to encrypt large files</title>
+		<link>/blog/how-to-encrypt-large-files/</link>
+					<comments>/blog/how-to-encrypt-large-files/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Thu, 10 Dec 2015 01:04:35 +0000</pubDate>
+				<category><![CDATA[CipherStor]]></category>
+		<category><![CDATA[Developer notes]]></category>
+		<guid isPermaLink="false">/?p=1735</guid>
+
+					<description><![CDATA[CipherStor is blazingly fast! Here we show how to use it within your data-flow pipeline to maintain high performance when encrypting large files.]]></description>
+		
+					<wfw:commentRss>/blog/how-to-encrypt-large-files/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Crypteron CipherStor Performance Benchmarks</title>
+		<link>/blog/cipherstor-performance-benchmarks/</link>
+					<comments>/blog/cipherstor-performance-benchmarks/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Tue, 17 Nov 2015 23:13:40 +0000</pubDate>
+				<category><![CDATA[CipherStor]]></category>
+		<category><![CDATA[Developer notes]]></category>
+		<guid isPermaLink="false">/?p=1651</guid>
+
+					<description><![CDATA[Blazing fast performance by Crypteron CipherStor that hits several gigabytes/sec enabling security even in high bandwidth scenarios]]></description>
+		
+					<wfw:commentRss>/blog/cipherstor-performance-benchmarks/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

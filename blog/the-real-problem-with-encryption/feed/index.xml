@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: 6 encryption mistakes that lead to data breaches	</title>
+	<atom:link href="/blog/the-real-problem-with-encryption/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/the-real-problem-with-encryption/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Mon, 12 Sep 2022 07:43:24 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>
+		By: h4nna		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-8803</link>
+
+		<dc:creator><![CDATA[h4nna]]></dc:creator>
+		<pubDate>Mon, 12 Sep 2022 07:43:24 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-8803</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/blog/the-real-problem-with-encryption/#comment-2638&quot;&gt;Jeff Davies&lt;/a&gt;.
+
+I&#039;m absolutely agree with everything you said,
+Very smart advise
+Thankyou]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/blog/the-real-problem-with-encryption/#comment-2638">Jeff Davies</a>.</p>
+<p>I&#8217;m absolutely agree with everything you said,<br />
+Very smart advise<br />
+Thankyou</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Twisted_Code		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-8252</link>
+
+		<dc:creator><![CDATA[Twisted_Code]]></dc:creator>
+		<pubDate>Tue, 02 Nov 2021 17:27:09 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-8252</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/blog/the-real-problem-with-encryption/#comment-8217&quot;&gt;Daman&lt;/a&gt;.
+
+Disclaimer (keeping in mind mistake #1 of this article&#039;s list): I&#039;m a software engineer, not a security expert.
+That assumption clarified, and also assuming I understand your question correctly, I&#039;ll answer your question as I understand it. (but first, one last assumption to limit the scope of my answer: I&#039;m also going to assume both your browser and the Web server you&#039;re communicating with are using today&#039;s &quot;best practices&quot; and not some alien technology or something cooked up by the NSA. If you happen to be an alien or NSA agent, you probably already know the answer, right?):
+1. The connection is probably encrypted using TLS. If you want to be sure, check whether the protocol is HTTPS and/or shows a lock icon next to the web address. If you want to be even more sure about the details (as I&#039;ve done on a few occasions when uncertainty arose), many browsers such as Firefox even let you view the full TLS certificate the browser received from the server (which in most cases will be automatically validated by the browser before displaying the page, by the way). 
+2. TLS (Transport Layer Security, a technology based on SSL and sometimes still called by that name) uses asymmetric cryptography (sometimes called public-key cryptography), in conjunction with identity certificates distributed by certificate authorities (CAs), to exchange a short symmetric key. 
+3. Asymmetric cryptography, in a nutshell (and you should really look into it if you have any further questions about this), relies on what&#039;s known as a &quot;trapdoor function&quot; to make it so that one person with a public key can encrypt but not decrypt data they want to send, while the recipient can decrypt it using a secret key mathematically related to the public key. I&#039;m really simplifying this, and honestly don&#039;t FULLY understand how things like RSA and Elliptic Curve work (2 popular variations on asymmetric cryptography)... but hey, I already told you I&#039;m not an expert.
+I hope that helps you feel little bit safer about your connection. I also recommend doing some googling over these topics to get a better understanding, because I certainly can&#039;t cover everything I&#039;ve learned in a single comment, sadly.
+Wishing you the best,
+~Twisted Code]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/blog/the-real-problem-with-encryption/#comment-8217">Daman</a>.</p>
+<p>Disclaimer (keeping in mind mistake #1 of this article&#8217;s list): I&#8217;m a software engineer, not a security expert.<br />
+That assumption clarified, and also assuming I understand your question correctly, I&#8217;ll answer your question as I understand it. (but first, one last assumption to limit the scope of my answer: I&#8217;m also going to assume both your browser and the Web server you&#8217;re communicating with are using today&#8217;s &#8220;best practices&#8221; and not some alien technology or something cooked up by the NSA. If you happen to be an alien or NSA agent, you probably already know the answer, right?):<br />
+1. The connection is probably encrypted using TLS. If you want to be sure, check whether the protocol is HTTPS and/or shows a lock icon next to the web address. If you want to be even more sure about the details (as I&#8217;ve done on a few occasions when uncertainty arose), many browsers such as Firefox even let you view the full TLS certificate the browser received from the server (which in most cases will be automatically validated by the browser before displaying the page, by the way).<br />
+2. TLS (Transport Layer Security, a technology based on SSL and sometimes still called by that name) uses asymmetric cryptography (sometimes called public-key cryptography), in conjunction with identity certificates distributed by certificate authorities (CAs), to exchange a short symmetric key.<br />
+3. Asymmetric cryptography, in a nutshell (and you should really look into it if you have any further questions about this), relies on what&#8217;s known as a &#8220;trapdoor function&#8221; to make it so that one person with a public key can encrypt but not decrypt data they want to send, while the recipient can decrypt it using a secret key mathematically related to the public key. I&#8217;m really simplifying this, and honestly don&#8217;t FULLY understand how things like RSA and Elliptic Curve work (2 popular variations on asymmetric cryptography)&#8230; but hey, I already told you I&#8217;m not an expert.<br />
+I hope that helps you feel little bit safer about your connection. I also recommend doing some googling over these topics to get a better understanding, because I certainly can&#8217;t cover everything I&#8217;ve learned in a single comment, sadly.<br />
+Wishing you the best,<br />
+~Twisted Code</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Windu Sayles		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-8245</link>
+
+		<dc:creator><![CDATA[Windu Sayles]]></dc:creator>
+		<pubDate>Tue, 13 Jul 2021 02:30:30 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-8245</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/blog/the-real-problem-with-encryption/#comment-2637&quot;&gt;Scott Arciszewski&lt;/a&gt;.
+
+In case anyone is reading this article in 2021 and beyond, the link to &quot;Cryptographic Doom Principle&quot; is out of date.  Here&#039;s a working one, as of July 12, 2021:
+https://moxie.org/2011/12/13/the-cryptographic-doom-principle.html]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/blog/the-real-problem-with-encryption/#comment-2637">Scott Arciszewski</a>.</p>
+<p>In case anyone is reading this article in 2021 and beyond, the link to &#8220;Cryptographic Doom Principle&#8221; is out of date.  Here&#8217;s a working one, as of July 12, 2021:<br />
+<a href="https://moxie.org/2011/12/13/the-cryptographic-doom-principle.html" rel="nofollow ugc">https://moxie.org/2011/12/13/the-cryptographic-doom-principle.html</a></p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Daman		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-8217</link>
+
+		<dc:creator><![CDATA[Daman]]></dc:creator>
+		<pubDate>Thu, 08 Apr 2021 02:21:24 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-8217</guid>
+
+					<description><![CDATA[i have a question, i am on a website that sends encrypted data, 
+my browser is supposed to decrypt that data every time i login, 
+How is the key sent to my browser? i intercept traffic between the server and my browser and can view all transactions and all requests, u can do that with most browsers now F12 on firefox will show you all traffic .
+
+The question is, the server HAS to send the key to my browser, right ? so where is the protection here ?]]></description>
+			<content:encoded><![CDATA[<p>i have a question, i am on a website that sends encrypted data,<br />
+my browser is supposed to decrypt that data every time i login,<br />
+How is the key sent to my browser? i intercept traffic between the server and my browser and can view all transactions and all requests, u can do that with most browsers now F12 on firefox will show you all traffic .</p>
+<p>The question is, the server HAS to send the key to my browser, right ? so where is the protection here ?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Russel		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-8170</link>
+
+		<dc:creator><![CDATA[Russel]]></dc:creator>
+		<pubDate>Fri, 12 Mar 2021 14:17:57 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-8170</guid>
+
+					<description><![CDATA[As always, the human factor and social engineering lead to all sorts of leaks.]]></description>
+			<content:encoded><![CDATA[<p>As always, the human factor and social engineering lead to all sorts of leaks.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: secureDeveloper		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-8167</link>
+
+		<dc:creator><![CDATA[secureDeveloper]]></dc:creator>
+		<pubDate>Sun, 07 Jul 2019 09:03:05 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-8167</guid>
+
+					<description><![CDATA[Great summary!  Thank you.
+
+//quote
+Where do you put your encryption key? Some common choices:
+In the database - BAD
+On the file system - BAD
+In an application config file - BAD
+//endquote
+
+Could you add &quot;As an environment variable&quot; to this list?  So I can have a clear reference to counter the mid-level developers who think they&#039;re smarter than a good hacker?  And maybe &quot;java system properties&quot;?
+
+I continue to see these used for the encryption-key.  And, similar to you, label this as &quot;hiding the key to your house under the doormat, or probably better, hanging the key to your house on the front door&quot;.
+
+thanks again]]></description>
+			<content:encoded><![CDATA[<p>Great summary!  Thank you.</p>
+<p>//quote<br />
+Where do you put your encryption key? Some common choices:<br />
+In the database &#8211; BAD<br />
+On the file system &#8211; BAD<br />
+In an application config file &#8211; BAD<br />
+//endquote</p>
+<p>Could you add &#8220;As an environment variable&#8221; to this list?  So I can have a clear reference to counter the mid-level developers who think they&#8217;re smarter than a good hacker?  And maybe &#8220;java system properties&#8221;?</p>
+<p>I continue to see these used for the encryption-key.  And, similar to you, label this as &#8220;hiding the key to your house under the doormat, or probably better, hanging the key to your house on the front door&#8221;.</p>
+<p>thanks again</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Ludovic Rembert		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-8067</link>
+
+		<dc:creator><![CDATA[Ludovic Rembert]]></dc:creator>
+		<pubDate>Mon, 29 Apr 2019 12:07:29 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-8067</guid>
+
+					<description><![CDATA[Hi Yaron,
+
+Thanks for the post. I&#039;m using a form of AES, but wondering which encryption mode to choose. I&#039;m leaning toward OFB, because I&#039;ve been told by other network engineers that it takes up less space, which corroborates some of the answers in that Stack Overflow post you linked to. However, OCB also looks appealing though it appears to be protected by patents (?). Which do you prefer? 
+
+Kindly,
+L]]></description>
+			<content:encoded><![CDATA[<p>Hi Yaron,</p>
+<p>Thanks for the post. I&#8217;m using a form of AES, but wondering which encryption mode to choose. I&#8217;m leaning toward OFB, because I&#8217;ve been told by other network engineers that it takes up less space, which corroborates some of the answers in that Stack Overflow post you linked to. However, OCB also looks appealing though it appears to be protected by patents (?). Which do you prefer? </p>
+<p>Kindly,<br />
+L</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Yaron Guez		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-5769</link>
+
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Mon, 21 May 2018 23:56:24 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-5769</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/blog/the-real-problem-with-encryption/#comment-5763&quot;&gt;Sunil Gupta&lt;/a&gt;.
+
+Hi Sunil,
+QKD helps distribute a *shared* key between *two* parties such that anyone else listening will be detected immediately. The drawbacks are that they are point-to-point links versus hub-and-spoke. So for N entities, you need N(N-1)/2 QKD links which becomes unmanageable exponentially. Also link lengths are typically limited to just a few hundred kilometers, limiting their geographic reach. Lastly, to distribute a *public* key (as you asked) you can do that over a public channel. No need for quantum anything. I hope that&#039;s helpful!]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/blog/the-real-problem-with-encryption/#comment-5763">Sunil Gupta</a>.</p>
+<p>Hi Sunil,<br />
+QKD helps distribute a *shared* key between *two* parties such that anyone else listening will be detected immediately. The drawbacks are that they are point-to-point links versus hub-and-spoke. So for N entities, you need N(N-1)/2 QKD links which becomes unmanageable exponentially. Also link lengths are typically limited to just a few hundred kilometers, limiting their geographic reach. Lastly, to distribute a *public* key (as you asked) you can do that over a public channel. No need for quantum anything. I hope that&#8217;s helpful!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Sunil Gupta		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-5763</link>
+
+		<dc:creator><![CDATA[Sunil Gupta]]></dc:creator>
+		<pubDate>Sun, 20 May 2018 05:20:09 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-5763</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/blog/the-real-problem-with-encryption/#comment-5672&quot;&gt;Yaron Guez&lt;/a&gt;.
+
+Hi Yaron 
+
+A great article with very apt information.  Curious to know whether you have explored the merit of using &quot;Quantum Key Distribution&quot; to distribute public keys as photons in an absolutely unhackable way.  
+
+Thanks
+Sunil]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/blog/the-real-problem-with-encryption/#comment-5672">Yaron Guez</a>.</p>
+<p>Hi Yaron </p>
+<p>A great article with very apt information.  Curious to know whether you have explored the merit of using &#8220;Quantum Key Distribution&#8221; to distribute public keys as photons in an absolutely unhackable way.  </p>
+<p>Thanks<br />
+Sunil</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Yaron Guez		</title>
+		<link>/blog/the-real-problem-with-encryption/#comment-5672</link>
+
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Fri, 23 Feb 2018 19:23:48 +0000</pubDate>
+		<guid isPermaLink="false">/?p=1484#comment-5672</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/blog/the-real-problem-with-encryption/#comment-5670&quot;&gt;Arno Laenen&lt;/a&gt;.
+
+Hi Arno, my name is Yaron Guez and this was published in 2016.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/blog/the-real-problem-with-encryption/#comment-5670">Arno Laenen</a>.</p>
+<p>Hi Arno, my name is Yaron Guez and this was published in 2016.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

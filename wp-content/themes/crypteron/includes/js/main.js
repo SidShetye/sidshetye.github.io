@@ -207,6 +207,13 @@ jQuery( document ).ready(function( $ ){
         if(id === null) return;
 
         $('a[href="#' + id + '"]').each(function(){
+            
+            // re-write all links to directly go to dashboard registration page
+            // var registerUrl = Crypteron_Vars.dashboard_url + "/register";
+            // this.href = registerUrl;
+            // this.target = "_blank";
+            // return;
+
             var link_item = $(this);
             var link_field_name = link_item.data('field-name');
             var link_field_value = link_item.data('field-value');
@@ -319,7 +326,6 @@ jQuery( document ).ready(function( $ ){
     $("#register-form").submit(function(e){
 		e.preventDefault();
 
-		
         var form = $(this);
 
 		var data = form.serialize();
@@ -330,64 +336,70 @@ jQuery( document ).ready(function( $ ){
         $('#register-error').html('').hide();
         $('#register-form .loader-container').show();
 
+        var registerSuccess = function(data, textStatus, request){
+            // $('#register-form').hide();
+            // $('#register-email').text(email);
+            // $('#register-success').fadeIn();
+            // $('#register-ok').fadeIn();
+            // $('#register-form input, #register-form button').prop('disabled', false);
+            $('#register-form .loader-container').hide();
+
+            if(typeof gtag === 'function') {
+                // fire default sign_up event, put label as our main marketing site
+                gtag('event', 'sign_up', { method : 'www.crypteron.com' })
+                // Set the user ID registered user as a persistent value 
+                gtag('config', gtagScriptLoader.GA_TRACKING_ID, { 'user_id': data.userId }); 
+            }
+            
+            if(campaign.length && campaign.val() == 'webinar' && typeof fbq == 'function'){					
+                fbq('track', 'Lead');
+            }
+
+            if(typeof mixpanel !== 'undefined' ){
+                mixpanel.identify(data.userId);
+            }
+
+            // All set, redirect to registration location
+            window.location.href = data.redirectAfterRegister;
+        };
+
+        var registerError=  function(error, textStatus, errorThrown){
+            $('#register-form input:visible, #register-form button').prop('disabled', false);
+            $('#register-form .loader-container').hide();
+
+            var msg = "";
+
+            if(!error.hasOwnProperty('responseJSON') || error.responseJSON == null){
+                $('#register-error').html('<strong>An unknown error occurred.  Please contact <a href="https://support.crypteron.com" title="Crypteron Support" target="_blank">Support</a>.</strong> Error details: "No error response returned."<br/>').fadeIn();
+                return;
+            }
+
+            if(error.responseJSON.hasOwnProperty('modelState')) {
+                msg += "<strong>Please correct the errors below:</strong><br/>";
+                $.each(error.responseJSON.modelState, function(index, modelState){
+                    $.each(modelState, function(index2, stateMessage){
+                        msg += stateMessage + "<br/>";
+                    });
+                });
+            } else if(error.responseJSON.hasOwnProperty('message')){
+                msg += "<strong>" + error.responseJSON.message + "</strong><br/>";
+            }
+            else {
+                msg += '<strong>An unknown error occurred.  Please contact <a href="https://support.crypteron.com" title="Crypteron Support" target="_blank">Support</a>.</strong> Error details: "No error message provided."<br/>';
+            }
+
+
+            $('#register-error').html(msg).fadeIn();
+        };
+
         $.ajax({
             type: "POST",
             url: Crypteron_Vars.api_url + "/account/register",
             data: data,
-            success: function(data){
-                // $('#register-form').hide();
-                // $('#register-email').text(email);
-                // $('#register-success').fadeIn();
-                // $('#register-ok').fadeIn();
-                // $('#register-form input, #register-form button').prop('disabled', false);
-                $('#register-form .loader-container').hide();
-                if(typeof gtag === 'function') {
-                    // fire default sign_up event, put label as our main marketing site
-                    gtag('event', 'sign_up', { method : 'www.crypteron.com' })
-                    // Set the user ID registered user as a persistent value 
-                    gtag('config', gtagScriptLoader.GA_TRACKING_ID, { 'user_id': data.UserName }); 
-                }
-                
-				if(campaign.length && campaign.val() == 'webinar' && typeof fbq == 'function'){					
-					fbq('track', 'Lead');
-				}
+            success: registerSuccess,
+            dataType: "json"
+          }).fail(registerError);
 
-                if(typeof mixpanel !== 'undefined' ){
-                    mixpanel.identify(data.UserName);
-                }
-
-                // All set, redirect to registration location
-                window.location.href = data.RedirectAfterRegister;
-            },
-            error: function(error){
-                $('#register-form input:visible, #register-form button').prop('disabled', false);
-                $('#register-form .loader-container').hide();
-
-                var msg = "";
-
-                if(!error.hasOwnProperty('responseJSON')){
-                    $('#register-error').html('<strong>An unknown error occurred.  Please contact <a href="https://support.crypteron.com" title="Crypteron Support" target="_blank">Support</a>.</strong> Error details: "No error response returned."<br/>').fadeIn();
-                    return;
-                }
-
-                if(error.responseJSON.hasOwnProperty('ModelState')) {
-                    msg += "<strong>Please correct the errors below:</strong><br/>";
-                    $.each(error.responseJSON.ModelState, function(index, modelState){
-                        $.each(modelState, function(index2, stateMessage){
-                            msg += stateMessage + "<br/>";
-                        });
-                    });
-                } else if(error.responseJSON.hasOwnProperty('Message')){
-                    msg += "<strong>" + error.responseJSON.Message + "</strong><br/>";
-                }
-                else {
-                    msg += '<strong>An unknown error occurred.  Please contact <a href="https://support.crypteron.com" title="Crypteron Support" target="_blank">Support</a>.</strong> Error details: "No error message provided."<br/>';
-                }
-
-
-                $('#register-error').html(msg).fadeIn();
-            }
-        });
         e.preventDefault();
     });
 
@@ -436,7 +448,7 @@ jQuery( document ).ready(function( $ ){
     })
 
     function loadDemo(){
-        if(window.location.hash == '#demo' || window.location.href == "https://www2.crypteron.com/#howitworks") {
+        if(window.location.hash == '#demo' || window.location.href == "https://www.crypteron.com/#howitworks") {
             
             var url = 'https://www.youtube.com/watch?v=CzoqGXzjG-w';
             if (typeof mixpanel !== 'undefined') {

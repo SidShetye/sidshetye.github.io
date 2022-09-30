@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: Announcing the new Crypteron Community Edition	</title>
+	<atom:link href="/blog/community-edition/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/community-edition/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Thu, 02 Jan 2020 04:39:50 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>
+		By: Joe Dispenza		</title>
+		<link>/blog/community-edition/#comment-2613</link>
+
+		<dc:creator><![CDATA[Joe Dispenza]]></dc:creator>
+		<pubDate>Fri, 07 Oct 2016 00:56:22 +0000</pubDate>
+		<guid isPermaLink="false">/?p=2318#comment-2613</guid>
+
+					<description><![CDATA[Rad!! We were trying to code a solution for this right when I found this for free - you just saved me a ton of time thank you!]]></description>
+			<content:encoded><![CDATA[<p>Rad!! We were trying to code a solution for this right when I found this for free &#8211; you just saved me a ton of time thank you!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Jesse Fogarty		</title>
+		<link>/blog/community-edition/#comment-2612</link>
+
+		<dc:creator><![CDATA[Jesse Fogarty]]></dc:creator>
+		<pubDate>Thu, 06 Oct 2016 15:41:04 +0000</pubDate>
+		<guid isPermaLink="false">/?p=2318#comment-2612</guid>
+
+					<description><![CDATA[Implementing the CE version myself today. Like most, will likely end off with my suggested route to clients being the paid plans. But, this does provide in my opinion marketing agencies with no excuse when it comes to potentially jeopardizing client data. I can&#039;t thank you guys enough in addition to the product for your support in making the internet a more robust, secure form of communication and, community.]]></description>
+			<content:encoded><![CDATA[<p>Implementing the CE version myself today. Like most, will likely end off with my suggested route to clients being the paid plans. But, this does provide in my opinion marketing agencies with no excuse when it comes to potentially jeopardizing client data. I can&#8217;t thank you guys enough in addition to the product for your support in making the internet a more robust, secure form of communication and, community.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Melissa		</title>
+		<link>/blog/community-edition/#comment-2519</link>
+
+		<dc:creator><![CDATA[Melissa]]></dc:creator>
+		<pubDate>Fri, 02 Sep 2016 00:07:10 +0000</pubDate>
+		<guid isPermaLink="false">/?p=2318#comment-2519</guid>
+
+					<description><![CDATA[Looking forward to trying this with my team! Thanks, Crypteron!]]></description>
+			<content:encoded><![CDATA[<p>Looking forward to trying this with my team! Thanks, Crypteron!</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

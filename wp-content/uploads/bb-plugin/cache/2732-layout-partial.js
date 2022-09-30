@@ -1,2 +1,0 @@
-
-(function($){$(function(){$('.fl-embed-video').fitVids();if($('.fl-module-video .fl-wp-video video').length>1){$('.fl-module-video .fl-wp-video video').mediaelementplayer({pauseOtherPlayers:false});}});})(jQuery);

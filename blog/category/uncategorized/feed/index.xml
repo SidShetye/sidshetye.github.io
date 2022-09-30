@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Uncategorized &#8211; Crypteron</title>
+	<atom:link href="/blog/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Wed, 07 Feb 2018 19:00:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>PCI DSS and key rotations simplified</title>
+		<link>/blog/pci-dss-key-rotations-simplified/</link>
+					<comments>/blog/pci-dss-key-rotations-simplified/#comments</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Wed, 22 Mar 2017 04:46:43 +0000</pubDate>
+				<category><![CDATA[Developer notes]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[dss]]></category>
+		<category><![CDATA[key management]]></category>
+		<category><![CDATA[key rotations]]></category>
+		<category><![CDATA[pci]]></category>
+		<category><![CDATA[pci-dss]]></category>
+		<guid isPermaLink="false">/?p=2842</guid>
+
+					<description><![CDATA[PCI compliance requires data encryption keys to be changed frequently. Here is how you can do it easily.]]></description>
+		
+					<wfw:commentRss>/blog/pci-dss-key-rotations-simplified/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>What the Biggest Data Breaches in Retail have taught us about Cybersecurity</title>
+		<link>/blog/what-the-biggest-data-breaches-in-retail-have-taught-us-about-cybersecurity/</link>
+					<comments>/blog/what-the-biggest-data-breaches-in-retail-have-taught-us-about-cybersecurity/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Sat, 14 Nov 2015 23:23:58 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">/?p=1621</guid>
+
+					<description><![CDATA[The retail sector has fallen victim to a large number of data breaches. We take a closer look at a few examples with some key takeaways.]]></description>
+		
+					<wfw:commentRss>/blog/what-the-biggest-data-breaches-in-retail-have-taught-us-about-cybersecurity/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>CipherDB could have Stopped Uber’s Data Breach</title>
+		<link>/blog/cipherdb-could-have-stopped-ubers-data-breach/</link>
+					<comments>/blog/cipherdb-could-have-stopped-ubers-data-breach/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Mon, 09 Mar 2015 19:01:35 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://crypteron.com/?p=496</guid>
+
+					<description><![CDATA[Uber left database keys in a public GitHub repo allowing unauthorized access.]]></description>
+		
+					<wfw:commentRss>/blog/cipherdb-could-have-stopped-ubers-data-breach/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Crypteron Negates OpenSSL Heartbleed Vulnerability</title>
+		<link>/blog/crypteron-negates-openssl-heartbleed-vulnerability/</link>
+					<comments>/blog/crypteron-negates-openssl-heartbleed-vulnerability/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Tue, 15 Apr 2014 01:51:54 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://crypteron.com/?p=190</guid>
+
+					<description><![CDATA[The biggest vulnerability in the last two years is mitigated with application layer encryption.]]></description>
+		
+					<wfw:commentRss>/blog/crypteron-negates-openssl-heartbleed-vulnerability/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Crypteron Mitigates SQL Injection Attacks</title>
+		<link>/blog/crypteron-mitigates-sql-injection-attacks/</link>
+					<comments>/blog/crypteron-mitigates-sql-injection-attacks/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Wed, 05 Mar 2014 01:50:37 +0000</pubDate>
+				<category><![CDATA[CipherDB]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://crypteron.com/?p=188</guid>
+
+					<description><![CDATA[SQL Injection is one of the hardest threats to stop and also the most prevalent.]]></description>
+		
+					<wfw:commentRss>/blog/crypteron-mitigates-sql-injection-attacks/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>What sets us apart from other security companies? What makes Crypteron better?</title>
+		<link>/blog/what-sets-us-apart-from-other-security-companies-what-makes-crypteron-better/</link>
+					<comments>/blog/what-sets-us-apart-from-other-security-companies-what-makes-crypteron-better/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Tue, 08 Oct 2013 01:44:14 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://crypteron.com/?p=186</guid>
+
+					<description><![CDATA[New cloud security companies are popping up quicker than ever. Crypteron is different.]]></description>
+		
+					<wfw:commentRss>/blog/what-sets-us-apart-from-other-security-companies-what-makes-crypteron-better/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How CipherDB could have prevented the $100 million NASDAQ hack</title>
+		<link>/blog/how-cipherdb-could-have-prevented-the-100-million-nasdaq-hack/</link>
+					<comments>/blog/how-cipherdb-could-have-prevented-the-100-million-nasdaq-hack/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Fri, 26 Jul 2013 01:26:32 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://crypteron.com/?p=180</guid>
+
+					<description><![CDATA[If NASDAQ had used CipherDB to protect their data, their losses would have been close to zero.]]></description>
+		
+					<wfw:commentRss>/blog/how-cipherdb-could-have-prevented-the-100-million-nasdaq-hack/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Why is the Cloud not secure?</title>
+		<link>/blog/why-is-the-cloud-not-secure/</link>
+					<comments>/blog/why-is-the-cloud-not-secure/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Mon, 01 Jul 2013 01:24:03 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://crypteron.com/?p=178</guid>
+
+					<description><![CDATA[At Crypteron, we often have to remind customers of the security risks of being in the cloud; and to do that we must look at why things are so different in the Cloud.]]></description>
+		
+					<wfw:commentRss>/blog/why-is-the-cloud-not-secure/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

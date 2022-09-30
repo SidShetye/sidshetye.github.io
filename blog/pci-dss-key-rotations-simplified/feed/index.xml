@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: PCI DSS and key rotations simplified	</title>
+	<atom:link href="/blog/pci-dss-key-rotations-simplified/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/pci-dss-key-rotations-simplified/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Wed, 15 Jun 2022 12:42:32 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>
+		By: AndrewL2O		</title>
+		<link>/blog/pci-dss-key-rotations-simplified/#comment-8583</link>
+
+		<dc:creator><![CDATA[AndrewL2O]]></dc:creator>
+		<pubDate>Wed, 15 Jun 2022 12:42:32 +0000</pubDate>
+		<guid isPermaLink="false">/?p=2842#comment-8583</guid>
+
+					<description><![CDATA[Very insightful article. And definitely, one of the simplest to understand explanations.]]></description>
+			<content:encoded><![CDATA[<p>Very insightful article. And definitely, one of the simplest to understand explanations.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

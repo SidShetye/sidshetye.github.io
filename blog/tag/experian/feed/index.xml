@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>experian &#8211; Crypteron</title>
+	<atom:link href="/blog/tag/experian/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Wed, 31 Aug 2016 20:29:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>Experian Data Breach Exposes 15 million T-Mobile records: The Crucial Takeaway</title>
+		<link>/blog/experian-data-breach-exposes-15-million-t-mobile-records/</link>
+					<comments>/blog/experian-data-breach-exposes-15-million-t-mobile-records/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Thu, 01 Oct 2015 21:26:28 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<category><![CDATA[data breach]]></category>
+		<category><![CDATA[experian]]></category>
+		<category><![CDATA[hack]]></category>
+		<category><![CDATA[tmobile]]></category>
+		<guid isPermaLink="false">/?p=1271</guid>
+
+					<description><![CDATA[Experian is hacked, 15 million T-Mobile customers affected. How does this incident affect the cybersecurity discussion?]]></description>
+		
+					<wfw:commentRss>/blog/experian-data-breach-exposes-15-million-t-mobile-records/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

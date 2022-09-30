@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>key rotations &#8211; Crypteron</title>
+	<atom:link href="/blog/tag/key-rotations/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Wed, 07 Feb 2018 19:00:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>PCI DSS and key rotations simplified</title>
+		<link>/blog/pci-dss-key-rotations-simplified/</link>
+					<comments>/blog/pci-dss-key-rotations-simplified/#comments</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Wed, 22 Mar 2017 04:46:43 +0000</pubDate>
+				<category><![CDATA[Developer notes]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[dss]]></category>
+		<category><![CDATA[key management]]></category>
+		<category><![CDATA[key rotations]]></category>
+		<category><![CDATA[pci]]></category>
+		<category><![CDATA[pci-dss]]></category>
+		<guid isPermaLink="false">/?p=2842</guid>
+
+					<description><![CDATA[PCI compliance requires data encryption keys to be changed frequently. Here is how you can do it easily.]]></description>
+		
+					<wfw:commentRss>/blog/pci-dss-key-rotations-simplified/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

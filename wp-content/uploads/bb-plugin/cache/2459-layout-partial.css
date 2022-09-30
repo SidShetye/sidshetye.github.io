@@ -1,56 +1,157 @@
-.fl-builder-row-settings .fl-field-responsive-setting input[name="bg_position_custom_right"], .fl-builder-row-settings .fl-field-responsive-setting input[name="bg_position_custom_left"] {display: none !important;}
-.fl-node-57e07adfe5ec1 .fl-bg-video-audio {display: none;cursor: pointer;position: absolute;bottom: 20px;right: 20px;z-index: 5;width: 20px;}
-.fl-node-57e07adfe5ec1 .fl-bg-video-audio .fl-audio-control {font-size: 20px;}
-.fl-node-57e07adfe5ec1 .fl-bg-video-audio .fa-times {font-size: 10px;vertical-align: middle;position: absolute;top: 5px;left: 11px;bottom: 0;}
-.fl-node-57e07adfe5ec1 > .fl-row-content-wrap {border-top-width: 1px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 0px;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-57e07adfe5ec1 > .fl-row-content-wrap {padding-top: 20px;padding-bottom: 20px;}
-.fl-node-5903bcb10ffc7 {width: 10%;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-59038f2768dee {width: 30%;}
-.fl-node-59038f2768dee > .fl-col-content {border-top-width: 1px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-5903ad36efd60 {width: 30%;}
-.fl-node-5903ad36efd60 > .fl-col-content {border-top-width: 1px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-5903ad36efdaa {width: 30%;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-57e07adfe5dac {width: 100%;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-59038f2dc665a.fl-module-heading .fl-heading {text-align: left;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-59038f2dc665a > .fl-module-content {margin-bottom: 10px;}
-.fl-node-590392655d51d .fl-rich-text strong {font-weight: bold;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-5903ad4bf1c6b.fl-module-heading .fl-heading {text-align: left;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-5903ad4bf1c6b > .fl-module-content {margin-bottom: 10px;}
-.fl-node-5903ad5d0c4b2 .fl-rich-text strong {font-weight: bold;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-5903ae79a2a7f.fl-module-heading .fl-heading {text-align: left;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-5903ae79a2a7f > .fl-module-content {margin-bottom: 10px;}
-.fl-node-5903ae9eca937 .fl-rich-text strong {font-weight: bold;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-57e07adfe5de5 .fl-rich-text strong {font-weight: bold;}
-@media (max-width: 992px) {}
-@media (max-width: 768px) {}
-.fl-node-57e07adfe5de5 > .fl-module-content {margin-bottom: 0px;}
-.footer-list ul {list-style: none;padding-left: 0;}
-.footer-list-icons ul {padding-left: 30px;}
-.footer-list ul li {margin-bottom: 10px;font-size: 16px;}
-.footer-list-icons ul li {text-indent: -14px;}
-.footer-list ul li a {color: #fff;opacity: .9;}
-.footer-list-icons ul li i {margin-right: 10px;}
+
+
+
+
+
+
+/* Full Height Rows */
+.fl-node-57e07adfe5ec1.fl-row-full-height > .fl-row-content-wrap, 
+.fl-node-57e07adfe5ec1.fl-row-custom-height > .fl-row-content-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.fl-node-57e07adfe5ec1.fl-row-full-height > .fl-row-content-wrap {
+	min-height: 100vh;
+}
+.fl-node-57e07adfe5ec1.fl-row-custom-height > .fl-row-content-wrap {
+	min-height: 0;
+}
+
+.fl-builder-edit .fl-node-57e07adfe5ec1.fl-row-full-height > .fl-row-content-wrap {
+	min-height: calc( 100vh - 48px );
+}
+
+/* Full height iPad with portrait orientation. */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+	.fl-node-57e07adfe5ec1.fl-row-full-height > .fl-row-content-wrap {
+		min-height: 1024px;
+	}
+}
+/* Full height iPad with landscape orientation. */
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape){
+	.fl-node-57e07adfe5ec1.fl-row-full-height > .fl-row-content-wrap {
+		min-height: 768px;
+	}
+}
+/* Full height iPhone 5. You can also target devices with aspect ratio. */
+@media screen and (device-aspect-ratio: 40/71) {
+	.fl-node-57e07adfe5ec1.fl-row-full-height > .fl-row-content-wrap {
+		min-height: 500px;
+	}
+}
+.fl-node-57e07adfe5ec1 > .fl-row-content-wrap {
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+}
+ .fl-node-57e07adfe5ec1 > .fl-row-content-wrap {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+
+
+
+.fl-node-5903bcb10ffc7 {
+	width: 10%;
+}
+
+
+
+
+.fl-node-59038f2768dee {
+	width: 30%;
+}
+.fl-node-59038f2768dee > .fl-col-content {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+}
+
+
+
+
+.fl-node-5903ad36efd60 {
+	width: 30%;
+}
+.fl-node-5903ad36efd60 > .fl-col-content {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+}
+
+
+
+
+.fl-node-5903ad36efdaa {
+	width: 30%;
+}
+
+
+
+
+.fl-node-57e07adfe5dac {
+	width: 100%;
+}
+.fl-node-59038f2dc665a.fl-module-heading .fl-heading {
+	text-align: left;
+}
+ .fl-node-59038f2dc665a > .fl-module-content {
+	margin-bottom:10px;
+}
+.fl-node-5903ad4bf1c6b.fl-module-heading .fl-heading {
+	text-align: left;
+}
+ .fl-node-5903ad4bf1c6b > .fl-module-content {
+	margin-bottom:10px;
+}
+.fl-node-5903ae79a2a7f.fl-module-heading .fl-heading {
+	text-align: left;
+}
+ .fl-node-5903ae79a2a7f > .fl-module-content {
+	margin-bottom:10px;
+}
+ .fl-node-57e07adfe5de5 > .fl-module-content {
+	margin-bottom:0px;
+}
+
+/* Start Global Nodes CSS */
+
+/* End Global Nodes CSS */
+
+
+/* Start Layout CSS */
+.footer-list ul {
+    list-style:  none;
+    padding-left: 0;
+}
+
+.footer-list-icons ul {
+    padding-left: 30px;
+}
+
+.footer-list ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-list-icons ul li {
+    text-indent: -14px;
+}
+
+.footer-list ul li a {
+    color: #FFF;
+    opacity: 0.9;
+}
+
+.footer-list-icons ul li i {
+    margin-right: 10px;
+}
+
+/* End Layout CSS */
+

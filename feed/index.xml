@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Crypteron</title>
+	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Instant Data Security</description>
+	<lastBuildDate>Wed, 05 Feb 2020 20:00:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.2</generator>
+	<item>
+		<title>Migrating existing live data into Crypteron</title>
+		<link>/blog/migrating-existing-live-data-into-crypteron/</link>
+					<comments>/blog/migrating-existing-live-data-into-crypteron/#comments</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Thu, 20 Sep 2018 01:02:49 +0000</pubDate>
+				<category><![CDATA[CipherDB]]></category>
+		<category><![CDATA[Developer notes]]></category>
+		<guid isPermaLink="false">/?p=3123</guid>
+
+					<description><![CDATA[You're already live in production. And you have sensitive in the clear. Read this article to see how Crypteron can help.]]></description>
+		
+					<wfw:commentRss>/blog/migrating-existing-live-data-into-crypteron/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Encryption, Entity Framework and Projections</title>
+		<link>/blog/encryption-entity-framework-and-projections/</link>
+					<comments>/blog/encryption-entity-framework-and-projections/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Wed, 23 Aug 2017 00:24:59 +0000</pubDate>
+				<category><![CDATA[CipherDB]]></category>
+		<category><![CDATA[Developer notes]]></category>
+		<guid isPermaLink="false">/?p=2994</guid>
+
+					<description><![CDATA[Projections in Entity Framework live outside the entity lifecycle. Read more to learn how your can use Crypteron to secure such data.]]></description>
+		
+					<wfw:commentRss>/blog/encryption-entity-framework-and-projections/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>PCI DSS and key rotations simplified</title>
+		<link>/blog/pci-dss-key-rotations-simplified/</link>
+					<comments>/blog/pci-dss-key-rotations-simplified/#comments</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Wed, 22 Mar 2017 04:46:43 +0000</pubDate>
+				<category><![CDATA[Developer notes]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[dss]]></category>
+		<category><![CDATA[key management]]></category>
+		<category><![CDATA[key rotations]]></category>
+		<category><![CDATA[pci]]></category>
+		<category><![CDATA[pci-dss]]></category>
+		<guid isPermaLink="false">/?p=2842</guid>
+
+					<description><![CDATA[PCI compliance requires data encryption keys to be changed frequently. Here is how you can do it easily.]]></description>
+		
+					<wfw:commentRss>/blog/pci-dss-key-rotations-simplified/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Your data-center is not secure and what you can do about it</title>
+		<link>/blog/your-data-center-is-not-secure/</link>
+					<comments>/blog/your-data-center-is-not-secure/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Wed, 02 Nov 2016 22:56:02 +0000</pubDate>
+				<category><![CDATA[Developer notes]]></category>
+		<guid isPermaLink="false">/?p=2664</guid>
+
+					<description><![CDATA[There is no secure perimeter anymore. Neither in your corporate network nor in your data center. Fight a winning battle armed with self-protecting data rather than a losing one trying to protecting the infrastructure.]]></description>
+		
+					<wfw:commentRss>/blog/your-data-center-is-not-secure/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Introducing the Crypteron Startup Innovators Program</title>
+		<link>/blog/startup-innovators-program/</link>
+					<comments>/blog/startup-innovators-program/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Tue, 25 Oct 2016 19:07:08 +0000</pubDate>
+				<category><![CDATA[Developer notes]]></category>
+		<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=2606</guid>
+
+					<description><![CDATA[Qualifying startups get up to 50% off all plans. Tell us how you're changing the world and the our Startup Innovators Program will support your journey.]]></description>
+		
+					<wfw:commentRss>/blog/startup-innovators-program/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>6 encryption mistakes that lead to data breaches</title>
+		<link>/blog/the-real-problem-with-encryption/</link>
+					<comments>/blog/the-real-problem-with-encryption/#comments</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Thu, 20 Oct 2016 19:01:56 +0000</pubDate>
+				<category><![CDATA[Developer notes]]></category>
+		<guid isPermaLink="false">/?p=1484</guid>
+
+					<description><![CDATA[If encryption is so unbreakable, why do businesses and governments keep getting hacked? Six common encryption mistakes that lead to data breaches.]]></description>
+		
+					<wfw:commentRss>/blog/the-real-problem-with-encryption/feed/</wfw:commentRss>
+			<slash:comments>18</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Announcing the new Crypteron Community Edition</title>
+		<link>/blog/community-edition/</link>
+					<comments>/blog/community-edition/#comments</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Mon, 01 Aug 2016 17:33:48 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=2318</guid>
+
+					<description><![CDATA[Starting today you can now sign up for the Crypteron Community Edition for free with no performance limitations.]]></description>
+		
+					<wfw:commentRss>/blog/community-edition/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Data breach response &#8211; One click to save your business</title>
+		<link>/blog/data-breach-response-one-click-to-save-your-business/</link>
+					<comments>/blog/data-breach-response-one-click-to-save-your-business/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Fri, 12 Feb 2016 03:23:01 +0000</pubDate>
+				<category><![CDATA[Products]]></category>
+		<guid isPermaLink="false">/?p=1818</guid>
+
+					<description><![CDATA[Get breathing room - when you need it the most. Respond to a data breach with a single click.]]></description>
+		
+					<wfw:commentRss>/blog/data-breach-response-one-click-to-save-your-business/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Why We Need Proper Data-At-Rest Encryption: 191M U.S. Voters&#8217; Data Exposed</title>
+		<link>/blog/data-at-rest-encryption-voter-leak/</link>
+					<comments>/blog/data-at-rest-encryption-voter-leak/#respond</comments>
+		
+		<dc:creator><![CDATA[Yaron Guez]]></dc:creator>
+		<pubDate>Sat, 02 Jan 2016 23:37:34 +0000</pubDate>
+				<category><![CDATA[In The News]]></category>
+		<guid isPermaLink="false">/?p=1752</guid>
+
+					<description><![CDATA[Adding security at the application level is a large step forward in protecting data from the constant threat of data breaches]]></description>
+		
+					<wfw:commentRss>/blog/data-at-rest-encryption-voter-leak/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to encrypt large files</title>
+		<link>/blog/how-to-encrypt-large-files/</link>
+					<comments>/blog/how-to-encrypt-large-files/#respond</comments>
+		
+		<dc:creator><![CDATA[Sid Shetye]]></dc:creator>
+		<pubDate>Thu, 10 Dec 2015 01:04:35 +0000</pubDate>
+				<category><![CDATA[CipherStor]]></category>
+		<category><![CDATA[Developer notes]]></category>
+		<guid isPermaLink="false">/?p=1735</guid>
+
+					<description><![CDATA[CipherStor is blazingly fast! Here we show how to use it within your data-flow pipeline to maintain high performance when encrypting large files.]]></description>
+		
+					<wfw:commentRss>/blog/how-to-encrypt-large-files/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
